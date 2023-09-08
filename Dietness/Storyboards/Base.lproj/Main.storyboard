@@ -221,11 +221,11 @@
                                     <constraint firstItem="anU-jm-9em" firstAttribute="centerX" secondItem="Bdu-IT-G7O" secondAttribute="centerX" id="QBG-L1-kiF"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-fd-6Jo">
-                                <rect key="frame" x="358" y="47" width="60" height="70"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="252" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-fd-6Jo">
+                                <rect key="frame" x="228" y="47" width="150" height="70"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="G1P-mf-z51"/>
                                     <constraint firstAttribute="height" constant="70" id="MMO-Gf-Kgb"/>
-                                    <constraint firstAttribute="width" constant="60" id="hQM-ww-97R"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW0-ua-zQs">
@@ -252,9 +252,9 @@
                             <constraint firstItem="ddw-k4-lLN" firstAttribute="centerX" secondItem="09j-5u-050" secondAttribute="centerX" id="6Wu-xi-Y2x"/>
                             <constraint firstItem="kWL-c1-wo2" firstAttribute="leading" secondItem="y9J-u7-c6y" secondAttribute="leading" constant="20" id="ETU-6F-Xu4"/>
                             <constraint firstItem="Bdu-IT-G7O" firstAttribute="top" secondItem="kWL-c1-wo2" secondAttribute="bottom" id="HBQ-9G-jIm"/>
+                            <constraint firstItem="y9J-u7-c6y" firstAttribute="trailing" secondItem="Glc-fd-6Jo" secondAttribute="trailing" constant="50" id="MLD-fp-Cx3"/>
                             <constraint firstItem="VW0-ua-zQs" firstAttribute="top" secondItem="y9J-u7-c6y" secondAttribute="top" constant="24" id="MON-zG-z6q"/>
                             <constraint firstItem="Bdu-IT-G7O" firstAttribute="leading" secondItem="y9J-u7-c6y" secondAttribute="leading" id="Sd3-SK-zTF"/>
-                            <constraint firstAttribute="trailing" secondItem="Glc-fd-6Jo" secondAttribute="trailing" constant="10" id="TP0-JD-E5e"/>
                             <constraint firstItem="HgS-lc-qTc" firstAttribute="top" secondItem="Glc-fd-6Jo" secondAttribute="bottom" constant="20" id="YYc-x0-ZcM"/>
                             <constraint firstItem="Glc-fd-6Jo" firstAttribute="top" secondItem="y9J-u7-c6y" secondAttribute="top" id="c0y-1Q-KLp"/>
                             <constraint firstItem="HgS-lc-qTc" firstAttribute="top" secondItem="VW0-ua-zQs" secondAttribute="bottom" constant="44" id="foE-RF-0on"/>
@@ -287,7 +287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="014-SQ-bZ3">
-                                <rect key="frame" x="20" y="137" width="388" height="128"/>
+                                <rect key="frame" x="20" y="137" width="1060" height="128"/>
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Ckq-OJ-QMI"/>
@@ -359,7 +359,7 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AuT-tK-vGT">
-                                <rect key="frame" x="16" y="47" width="396" height="70"/>
+                                <rect key="frame" x="16" y="47" width="1068" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-Mj-rSD">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="70"/>
@@ -375,7 +375,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="66o-h4-7M3">
-                                        <rect key="frame" x="44" y="0.0" width="352" height="70"/>
+                                        <rect key="frame" x="44" y="0.0" width="1024" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="oTL-1j-An7"/>
                                             <constraint firstAttribute="height" constant="70" id="uYz-q1-JSB"/>
@@ -385,7 +385,7 @@
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2K1-sd-OBI">
-                                <rect key="frame" x="20" y="285" width="388" height="587"/>
+                                <rect key="frame" x="20" y="285" width="1060" height="587"/>
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oTM-b0-RFG">
                                     <size key="itemSize" width="168" height="166"/>
@@ -864,7 +864,7 @@
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="globe" catalog="system" width="128" height="123"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
-        <image name="logo" width="518" height="516.66668701171875"/>
+        <image name="logo" width="1024" height="1024"/>
         <image name="sign-out" width="17" height="18"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="AppBlackColor">

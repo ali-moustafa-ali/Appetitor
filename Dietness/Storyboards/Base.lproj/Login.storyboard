@@ -1840,7 +1840,7 @@
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="120"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="eye.fill" catalog="system" width="128" height="80"/>
-        <image name="logo" width="518" height="516.66668701171875"/>
+        <image name="logo" width="1024" height="1024"/>
         <image name="success" width="275" height="228"/>
         <image name="xmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AppBlackColor">
