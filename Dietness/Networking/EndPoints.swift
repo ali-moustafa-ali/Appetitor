@@ -40,7 +40,14 @@ class EndPoints{
     static let deleteOrder = "/removeUserOrder"
     static let getCategories = "/categories/get"
     static let updateToken = "/updateFcmToken"
+    
+    
+    // home
     static let slider = "/getsliders"
+    static let foodSystems = "/food-systems"
+
+    
+    
     static let setting = "/settings"
     static let sendDeliveryTime = "/profile/UpdateDelieveryTimeframe"
     

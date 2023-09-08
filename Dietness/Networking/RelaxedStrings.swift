@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 struct RelaxedString: Codable {
     let value: String
 

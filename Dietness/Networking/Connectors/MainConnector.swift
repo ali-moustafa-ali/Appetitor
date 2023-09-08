@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MainConnector:Connector,AuthorizedConnector{
+enum MainConnector: Connector, AuthorizedConnector{
     
     
     case getPackages
@@ -16,11 +16,13 @@ enum MainConnector:Connector,AuthorizedConnector{
     case getPackagesById(id:Int)
     case getCategories
     case getSlider
+    case foodSystems
     case setting
 
     var baseURL: URL{
         return URL(string: EndPoints.baseUrl)!
     }
+    
     var authorizationToken: AuthorizationToken?{
         switch self {
         default:
@@ -31,6 +33,8 @@ enum MainConnector:Connector,AuthorizedConnector{
     
     var endpoint: String{
         switch self {
+        case .foodSystems:
+            return EndPoints.foodSystems
         case .getPackages:
             return EndPoints.getPackages
         case .getUpdatedPackages:
@@ -59,17 +63,9 @@ enum MainConnector:Connector,AuthorizedConnector{
     
     var parameters: ParametersRepresentable?{
         switch self {
-        case .setting:
-            return nil
-        case .getPackages:
-            return nil
-        case .getUpdatedPackages:
-            return nil
         case .getPackagesById(let id):
             return Parameter.queryInt(key: "id", value: id)
-        case .getCategories:
-            return nil
-        case .getSlider:
+        default:
             return nil
         }
     }

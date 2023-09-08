@@ -3,7 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -57,7 +57,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-k4-lLN">
-                                <rect key="frame" x="172.33333333333334" y="357" width="83.666666666666657" height="22.333333333333314"/>
+                                <rect key="frame" x="175.33333333333334" y="357" width="77.666666666666657" height="35.666666666666686"/>
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -70,7 +70,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-c1-wo2">
-                                <rect key="frame" x="20" y="387.33333333333326" width="388" height="438.66666666666674"/>
+                                <rect key="frame" x="20" y="400.66666666666674" width="388" height="425.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MainCell" rowHeight="224" id="xWR-SZ-xkB" customClass="MainCell" customModule="Dietness" customModuleProvider="target">
@@ -87,7 +87,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="348" height="202"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pG6-Iu-X0i">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="348" height="122"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="348" height="120"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="120" id="45u-gY-vNd"/>
                                                                     </constraints>
@@ -97,8 +97,17 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrW-Nw-EHH">
+                                                                    <rect key="frame" x="0.0" y="120" width="348" height="22"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="22" id="odh-5e-YTX"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVv-Bp-yig">
-                                                                    <rect key="frame" x="0.0" y="122" width="348" height="80"/>
+                                                                    <rect key="frame" x="0.0" y="142" width="348" height="60"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0O-Y1-q2H" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
                                                                             <rect key="frame" x="124" y="16" width="100" height="50"/>
@@ -134,7 +143,7 @@
                                                                     <constraints>
                                                                         <constraint firstItem="a0O-Y1-q2H" firstAttribute="centerX" secondItem="UVv-Bp-yig" secondAttribute="centerX" id="0lR-ru-vxX"/>
                                                                         <constraint firstItem="a0O-Y1-q2H" firstAttribute="top" secondItem="UVv-Bp-yig" secondAttribute="top" constant="16" id="L2l-Fb-aSE"/>
-                                                                        <constraint firstAttribute="height" constant="80" id="U0R-bf-afd"/>
+                                                                        <constraint firstAttribute="height" constant="60" id="U0R-bf-afd"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -164,6 +173,7 @@
                                         <connections>
                                             <outlet property="moreBtnOutlet" destination="ABS-BN-3d0" id="o7Y-27-DUp"/>
                                             <outlet property="packageImage" destination="pG6-Iu-X0i" id="mrD-wE-AcU"/>
+                                            <outlet property="titleLbl" destination="HrW-Nw-EHH" id="dma-Eo-B2n"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -287,7 +297,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="014-SQ-bZ3">
-                                <rect key="frame" x="20" y="137" width="1060" height="128"/>
+                                <rect key="frame" x="20" y="137" width="388" height="128"/>
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Ckq-OJ-QMI"/>
@@ -359,7 +369,7 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AuT-tK-vGT">
-                                <rect key="frame" x="16" y="47" width="1068" height="70"/>
+                                <rect key="frame" x="16" y="47" width="396" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-Mj-rSD">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="70"/>
@@ -375,7 +385,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="66o-h4-7M3">
-                                        <rect key="frame" x="44" y="0.0" width="1024" height="70"/>
+                                        <rect key="frame" x="44" y="0.0" width="352" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="oTL-1j-An7"/>
                                             <constraint firstAttribute="height" constant="70" id="uYz-q1-JSB"/>
@@ -385,7 +395,7 @@
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2K1-sd-OBI">
-                                <rect key="frame" x="20" y="285" width="1060" height="587"/>
+                                <rect key="frame" x="20" y="285" width="388" height="587"/>
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oTM-b0-RFG">
                                     <size key="itemSize" width="168" height="166"/>
@@ -786,7 +796,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-Rq-nbL">
-                                                    <rect key="frame" x="88" y="17.666666666666668" width="42.333333333333343" height="20.000000000000004"/>
+                                                    <rect key="frame" x="88" y="11.666666666666664" width="40" height="32"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="17"/>
                                                     <color key="textColor" name="AppBlackColor"/>
                                                     <nil key="highlightedColor"/>
@@ -820,7 +830,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عربي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ4-QP-XVP">
-                                                    <rect key="frame" x="88" y="17.666666666666668" width="32" height="20.000000000000004"/>
+                                                    <rect key="frame" x="88" y="11.666666666666664" width="39.666666666666657" height="32"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="17"/>
                                                     <color key="textColor" name="AppBlackColor"/>
                                                     <nil key="highlightedColor"/>

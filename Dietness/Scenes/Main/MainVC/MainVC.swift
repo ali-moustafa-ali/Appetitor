@@ -35,6 +35,10 @@ class MainVC: UIViewController {
     
     var sliders : [Slider] = []
     var packages : [Package] = []
+    
+    
+    var foodSystems : [FoodSystemItem] = []
+
     var imageURL = ""
     var sliderURL = ""
     
@@ -68,7 +72,7 @@ class MainVC: UIViewController {
     func getFoodSystems() {
         self.view.makeToastActivity(.center)
         
-        Connect.default.request(MainConnector.getPackages).decoded(toType: PackagesResponse.self).observe {
+        Connect.default.request(MainConnector.foodSystems).decoded(toType: FoodSystemModel.self).observe {
             (result) in
             
             self.view.hideToastActivity()
@@ -76,17 +80,17 @@ class MainVC: UIViewController {
             switch result {
                 
             case .success(let data):
-                print("packages success")
-                self.packages = data.result?.packages ?? []
-                print(self.packages)
-                self.imageURL = data.result?.image_url ?? ""
-                DispatchQueue.main.async {
+                print("foodSystems success")
+                self.foodSystems = data.result ?? []
+                print(self.foodSystems, "should be food system")
+//                self.imageURL = data.result?.image_url ?? ""
+//                DispatchQueue.main.async {
                     self.packagesTableView.reloadData()
                     //                    self.pagerView.reloadData()
-                }
+//                }
                 
             case .failure(let error):
-                print("packages failed")
+                print("foodSystems failed")
                 self.view.makeToast(error.localizedDescription)
             }
             
@@ -162,39 +166,41 @@ class MainVC: UIViewController {
 extension MainVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return packages.count
+        return foodSystems.count
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        300
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
         
-        let imgURL = "\(imageURL)/\(packages[indexPath.row].image ?? "")"
+        let title = Helper.language == "ar" ? foodSystems[indexPath.row].nameAr : foodSystems[indexPath.row].nameEn
+        cell.titleLbl.text = title
         
-        if let url = URL(string: imgURL) {
-            cell.packageImage.sd_setImage(with: url, placeholderImage: UIImage.init(named: "default"))
-        }
         
-        cell.moreBtnOutlet.onTap { [weak self] in
-            
-            let vc = self?.storyboard?.instantiateViewController(identifier: "PackagePopUpVC") as! PackagePopUpVC
-            
-            vc.package = self?.packages[indexPath.row]
-            vc.imageURL = imgURL
-            
-            vc.didTapSubscribe = {[weak self]  planId in
-                
-                let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
-                
-                
-                vc.planId = planId
-                
-                
-                self?.navigationController?.pushViewController(vc, animated: true)
-            }
-            
-            self?.present(vc, animated: true, completion: nil)
-        }
+//        cell.moreBtnOutlet.onTap { [weak self] in
+//
+//            let vc = self?.storyboard?.instantiateViewController(identifier: "PackagePopUpVC") as! PackagePopUpVC
+//
+//            vc.package = self?.packages[indexPath.row]
+////            vc.imageURL = imgURL
+//
+//            vc.didTapSubscribe = {[weak self]  planId in
+//
+//                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+//
+//
+//                vc.planId = planId
+//
+//
+//                self?.navigationController?.pushViewController(vc, animated: true)
+//            }
+//
+//            self?.present(vc, animated: true, completion: nil)
+//        }
         
         return cell
     }
@@ -227,3 +233,49 @@ extension MainVC :  FSPagerViewDelegate, FSPagerViewDataSource {
         return cell
     }
 }
+
+
+//MARK: Table for packages
+
+//extension MainVC: UITableViewDataSource, UITableViewDelegate {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return packages.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
+//
+//        let imgURL = "\(imageURL)/\(packages[indexPath.row].image ?? "")"
+//
+//        if let url = URL(string: imgURL) {
+//            cell.packageImage.sd_setImage(with: url, placeholderImage: UIImage.init(named: "default"))
+//        }
+//
+//        cell.moreBtnOutlet.onTap { [weak self] in
+//
+//            let vc = self?.storyboard?.instantiateViewController(identifier: "PackagePopUpVC") as! PackagePopUpVC
+//
+//            vc.package = self?.packages[indexPath.row]
+//            vc.imageURL = imgURL
+//
+//            vc.didTapSubscribe = {[weak self]  planId in
+//
+//                let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+//
+//
+//                vc.planId = planId
+//
+//
+//                self?.navigationController?.pushViewController(vc, animated: true)
+//            }
+//
+//            self?.present(vc, animated: true, completion: nil)
+//        }
+//
+//        return cell
+//    }
+//
+//
+//}

@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import MOLH
+
 class DietnessServices {
     
     class func taskForPOSTRequest<RequestType: Encodable, ResponseType: Decodable, ErrorResponse:Decodable >(url: URL, responseType: ResponseType.Type, body: RequestType,errorResponse:ErrorResponse.Type, completion: @escaping (ResponseType?,ErrorResponse?, Error?) -> Void) {
