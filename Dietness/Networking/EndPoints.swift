@@ -9,7 +9,9 @@
 import Foundation
 
 class EndPoints{
-    static let baseUrl = "https://dietnesskw.com/api/user"
+    static let baseUrl = "https://Appetitor.app/api/user"
+
+//    static let baseUrl = "https://dietnesskw.com/api/user"
     
     static let signup = "/signup"
     static let unPauseDay = "/unPauseDay"

@@ -31,6 +31,25 @@ class SignupVC: UIViewController {
         getRules()
     }
     
+    
+    func shortcutToCompleteDesign(){
+        let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
+        vc.new = true
+        vc.showDeliverySwitch = self.showDeliverySwitch
+        vc.note = self.note
+        
+        vc.didAddAddress = { [weak self] in
+            let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
+            otpVC.comingFrom = "signup"
+            otpVC.type = "email"
+            otpVC.email = self?.emailTextField.text ?? ""
+            otpVC.autoActive = self?.autoActive
+            self?.navigationController?.pushViewController(otpVC, animated: true)
+        }
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     func signup(){
         self.view.makeToastActivity(.center)
         
@@ -46,7 +65,9 @@ class SignupVC: UIViewController {
                                                               email: emailTextField.text ?? "",
                                                               password: passwordTextField.text ?? "" ,
                                                               code: code,
-                                                              planId: planId)).decoded(toType: SignUpResponse.self).observe { (result) in
+                                                              planId: planId)).decoded(toType: SignUpResponse.self).observe {
+            [weak self] (result) in
+            guard let self = self else{return}
             
             self.view.hideToastActivity()
             switch result{
@@ -78,6 +99,14 @@ class SignupVC: UIViewController {
                     self.view.makeToast(data.message)
                 }
             case .failure(let error):
+                
+                // MARK: shortcut
+                
+                self.shortcutToCompleteDesign()
+                
+                
+                
+                
                 self.view.makeToast(error.localizedDescription)
             }
         }

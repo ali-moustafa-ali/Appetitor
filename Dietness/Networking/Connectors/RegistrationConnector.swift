@@ -83,7 +83,7 @@ enum RegisterationConnector:Connector,AuthorizedConnector{
             
         case .signup(let name, let mobile, let email, let password, let code, let planId):
             
-            let params = Parameter.jsonObject(value: ["name":name,"mobile":mobile,"email":email,"password":password,"verify_password":password,"code":code, "plan_id": String(planId)])
+            let params = Parameter.jsonObject(value: ["name":name,"mobile":mobile,"email":email,"password":password,"verify_password":password,"code":code, "planId": String(planId)])
             
             print(params)
             
