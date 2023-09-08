@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "MORE"; ObjectID = "ABS-BN-3d0"; */
+"ABS-BN-3d0.normalTitle" = "اشترك";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "OPw-Rq-nbL"; */
+"OPw-Rq-nbL.text" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "100 Gm"; ObjectID = "cZF-f2-rWc"; */
+"cZF-f2-rWc.text" = "100 Gm";
+
+/* Class = "UIButton"; normalTitle = "SUBSCRIBE"; ObjectID = "d79-7M-VQ8"; */
+"d79-7M-VQ8.normalTitle" = "إشتراك";
+
+/* Class = "UILabel"; text = "Golden Package"; ObjectID = "dGY-6k-l7S"; */
+"dGY-6k-l7S.text" = "Golden Package";
+
+/* Class = "UILabel"; text = "Packages"; ObjectID = "ddw-k4-lLN"; */
+"ddw-k4-lLN.text" = "الباقات";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "g0H-Pm-Is3"; */
+"g0H-Pm-Is3.text" = "Label";
+
+/* Class = "UILabel"; text = "breakfast+4 main course+ snacks+ salad"; ObjectID = "lxL-K3-Jon"; */
+"lxL-K3-Jon.text" = "breakfast+4 main course+ snacks+ salad";
+
+/* Class = "UILabel"; text = "180 K.D"; ObjectID = "qWh-kS-I2g"; */
+"qWh-kS-I2g.text" = "180 K.D";
+
+/* Class = "UIButton"; normalTitle = "OUR PACKAGES"; ObjectID = "rV1-Iv-POj"; */
+"rV1-Iv-POj.normalTitle" = "وجباتنا";

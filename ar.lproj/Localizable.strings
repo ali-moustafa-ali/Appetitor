@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  DIETNESS
+
+  Created by mohamed dorgham on 8/29/20.
+  Copyright © 2020 mohamed dorgham. All rights reserved.
+*/
+"Password Changed Successfully" = "تم تغيير كلمة السر بنجاح";
+"OTP error" = "كود خطأ";
+"Please choose your meal for today" = "برجاء إختيار وجبتك اليوم";
+"Error Update Profile" = "فشل تعديل البيانات الشخصية";
+"Profile Updated Successfully" = "تم تعديل البيانات الشخصية";
+"Password Changed Successfully" = "تم تغيير كلمة السر بنجاح";
+"Password Change Failed" = "فشل تغيير كلمة السر";
+"days" = "أيام";
+"Ordered Successfuly" = "تم الطلب بنجاح";
+"Order Failed" = "فشل الطلب";
+"Login" = "تسجيل الدخول";
+"عربي" = "English";
+"Email Address" = "البريد الإلكتروني";
+"Phone Number" = "رقم الجوال";
+"SAVE" = "حفظ";
+"check your email" = "تحقق من بريدك الإلكتروني";
+"check your phone" = "تحقق من رقم هاتفك";
+"It is very important to us that we provide you with the highest level of service. In order to help us do this, from time to time we may send you details of products, services, discounts, promotions and campaigns, which we think, may be of interest to you. We may send you marketing communications with your consent. If at any time you do not wish to receive these details and wish to unsubscribe from marketing communications, contact us via e-mail or log onto your account to change your relevant settings from my account link on the user main page." = "من المهم جدًا بالنسبة لنا أن نقدم لك أعلى مستوى من الخدمة. من أجل مساعدتنا على القيام بذلك ، قد نرسل لك من وقت لآخر تفاصيل عن المنتجات والخدمات والخصومات والعروض الترويجية والحملات التي نعتقد أنها قد تهمك. قد نرسل لك اتصالات تسويقية بموافقتك. إذا كنت لا ترغب في أي وقت في تلقي هذه التفاصيل وترغب في إلغاء الاشتراك في الاتصالات التسويقية ، فاتصل بنا عبر البريد الإلكتروني أو قم بتسجيل الدخول إلى حسابك لتغيير الإعدادات ذات الصلة من رابط حسابي في الصفحة الرئيسية للمستخدم.";
+
+"Payment" = "الدفع";
+"Cancel" = "الغاء";
+"Choose Payment Method" = "اختر طريقة الدفع";
+"KNET" = "كي نت";
+"Bank Cards" = "بطاقات بنكية";

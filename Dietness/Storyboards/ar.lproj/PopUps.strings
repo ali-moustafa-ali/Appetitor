@@ -1,0 +1,70 @@
+
+/* Class = "UITextField"; placeholder = "Old Password"; ObjectID = "07X-0q-6y8"; */
+"07X-0q-6y8.placeholder" = "كلمة السر القديمة";
+
+/* Class = "UITextField"; placeholder = "Street"; ObjectID = "1zZ-9e-iBD"; */
+"1zZ-9e-iBD.placeholder" = "الشارع";
+
+/* Class = "UITextField"; placeholder = "Governorate"; ObjectID = "3Mk-HU-aJI"; */
+"3Mk-HU-aJI.placeholder" = "المحافظة";
+
+/* Class = "UITextField"; placeholder = "Flat"; ObjectID = "3QS-wV-W8J"; */
+"3QS-wV-W8J.placeholder" = "الشقة";
+
+/* Class = "UIButton"; normalTitle = "CONFIRM"; ObjectID = "8ct-wp-dg0"; */
+"8ct-wp-dg0.normalTitle" = "تأكيد";
+
+/* Class = "UITextField"; placeholder = "Region"; ObjectID = "9Gf-6s-Gax"; */
+"9Gf-6s-Gax.placeholder" = "المنطقة";
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "O5C-ox-NoP"; */
+"O5C-ox-NoP.normalTitle" = "حفظ";
+
+/* Class = "UITextField"; placeholder = "Avenue"; ObjectID = "PPn-9c-8wd"; */
+"PPn-9c-8wd.placeholder" = "جادة";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "Pzb-JF-u71"; */
+"Pzb-JF-u71.text" = "It is very important to us that we provide you with the highest level of service. In order to help us do this, from time to time we may send you details of products, services, discounts, promotions and campaigns, which we think, may be of interest to you. We may send you marketing communications with your consent. If at any time you do not wish to receive these details and wish to unsubscribe from marketing communications, contact us via e-mail or log onto your account to change your relevant settings from my account link on the user main page.
+";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "TPW-cj-Whq"; */
+"TPW-cj-Whq.text" = "سياسة الخصوصية";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "UFb-o4-qaB"; */
+"UFb-o4-qaB.placeholder" = "كلمة السر";
+
+/* Class = "UILabel"; text = "01234567899"; ObjectID = "UHy-1P-UjZ"; */
+"UHy-1P-UjZ.text" = "01234567899";
+
+/* Class = "UITextField"; placeholder = "House"; ObjectID = "Wbm-5l-UAo"; */
+"Wbm-5l-UAo.placeholder" = "المنزل";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "duZ-d3-9bs"; */
+"duZ-d3-9bs.placeholder" = "تأكيد كلمة السر";
+
+/* Class = "UILabel"; text = "for package renewal please contact us"; ObjectID = "eyo-i5-P12"; */
+"eyo-i5-P12.text" = "لتجديد الباقة تواصل معنا";
+
+/* Class = "UILabel"; text = "Payment Successful"; ObjectID = "jYS-JO-AIK"; */
+"jYS-JO-AIK.text" = "تم الدفع بنجاح";
+
+/* Class = "UIButton"; normalTitle = "CHOOSE FROM MAP"; ObjectID = "lQm-Hw-eVu"; */
+"lQm-Hw-eVu.normalTitle" = "تحديد على الخريطة";
+
+/* Class = "UITextField"; placeholder = "Floor"; ObjectID = "r2L-wr-W1V"; */
+"r2L-wr-W1V.placeholder" = "الدور";
+
+/* Class = "UITextField"; placeholder = "Piece"; ObjectID = "u73-Aq-wf2"; */
+"u73-Aq-wf2.placeholder" = "القطعة";
+
+/* Class = "UILabel"; text = "Reset Password"; ObjectID = "va6-YB-p71"; */
+"va6-YB-p71.text" = "إستعادة كلمة السر";
+
+/* Class = "UITextView"; text = "Notes"; ObjectID = "wOO-Id-CTi"; */
+"wOO-Id-CTi.text" = "ملاحظات";
+
+/* Class = "UILabel"; text = "Add a new address"; ObjectID = "y5m-OD-cV2"; */
+"y5m-OD-cV2.text" = "إضافة عنوان جديد";
+
+/* Class = "UIButton"; normalTitle = "CONTACT"; ObjectID = "yKA-zG-855"; */
+"yKA-zG-855.normalTitle" = "التواصل";

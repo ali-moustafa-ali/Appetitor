@@ -1,0 +1,129 @@
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "0n7-Fl-4dv"; */
+"0n7-Fl-4dv.placeholder" = "كلمة السر";
+
+/* Class = "UITextField"; placeholder = "Enter Your Email"; ObjectID = "1dI-Y1-PLo"; */
+"1dI-Y1-PLo.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "2gS-Uk-ByI"; */
+"2gS-Uk-ByI.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "3KM-CP-RhV"; */
+"3KM-CP-RhV.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "+01234567899"; ObjectID = "3yS-l1-74T"; */
+"3yS-l1-74T.text" = "+01234567899";
+
+/* Class = "UILabel"; text = "We have sent a code to the phone number you entered"; ObjectID = "52D-gS-frH"; */
+"52D-gS-frH.text" = "لقد أرسلنا لك كود التحقق على رقم الجوال";
+
+/* Class = "UILabel"; text = "Check Phone Number"; ObjectID = "5Cu-e9-Vym"; */
+"5Cu-e9-Vym.text" = "تحقق من رقم الجوال";
+
+/* Class = "UIButton"; normalTitle = "CONFIRM"; ObjectID = "7M8-dh-pCH"; */
+"7M8-dh-pCH.normalTitle" = "تأكيد";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "8K6-Mj-fWS"; */
+"8K6-Mj-fWS.placeholder" = "تأكيد كلمة السر";
+
+/* Class = "UITextField"; placeholder = "Enter Your Email"; ObjectID = "8bA-WL-Frb"; */
+"8bA-WL-Frb.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "9f5-Qz-EJ1"; */
+"9f5-Qz-EJ1.placeholder" = "رقم الجوال";
+
+/* Class = "UIButton"; normalTitle = "SIGNUP"; ObjectID = "ATz-Vb-ai4"; */
+"ATz-Vb-ai4.normalTitle" = "إنشاء حساب";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone"; ObjectID = "BOE-V9-dim"; */
+"BOE-V9-dim.placeholder" = "رقم الجوال";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "C76-bU-DtU"; */
+"C76-bU-DtU.placeholder" = "الإسم بالكامل";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "Ck7-4G-pUS"; */
+"Ck7-4G-pUS.text" = "من المهم جدًا بالنسبة لنا أن نقدم لك أعلى مستوى من الخدمة. من أجل مساعدتنا على القيام بذلك ، قد نرسل لك من وقت لآخر تفاصيل عن المنتجات والخدمات والخصومات والعروض الترويجية والحملات التي نعتقد أنها قد تهمك. قد نرسل لك اتصالات تسويقية بموافقتك. إذا كنت لا ترغب في أي وقت في تلقي هذه التفاصيل وترغب في إلغاء الاشتراك في الاتصالات التسويقية ، فاتصل بنا عبر البريد الإلكتروني أو قم بتسجيل الدخول إلى حسابك لتغيير الإعدادات ذات الصلة من رابط حسابي في الصفحة الرئيسية للمستخدم.";
+
+/* Class = "UIButton"; normalTitle = "LOGIN"; ObjectID = "EZT-bS-GC2"; */
+"EZT-bS-GC2.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "00:60"; ObjectID = "IgS-sn-fyd"; */
+"IgS-sn-fyd.text" = "00:60";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "LXp-dx-j88"; */
+"LXp-dx-j88.text" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "Your account will be activated soon"; ObjectID = "M4A-R2-7n9"; */
+"M4A-R2-7n9.text" = "سوف يتم تفعيل حسابك قريبا";
+
+/* Class = "UIButton"; normalTitle = "DID YOU FORGET PASSWORD ?"; ObjectID = "Qh3-bY-XUa"; */
+"Qh3-bY-XUa.normalTitle" = "هل نسيت كلمة السر ؟";
+
+/* Class = "UITextField"; placeholder = "Enter Your Phone"; ObjectID = "SDh-Au-wjy"; */
+"SDh-Au-wjy.placeholder" = "رقم الجوال";
+
+/* Class = "UILabel"; text = "Successful Registeration"; ObjectID = "Ufu-SI-zIv"; */
+"Ufu-SI-zIv.text" = "تم التسجيل بنجاح";
+
+/* Class = "UILabel"; text = "Your account will be activated soon"; ObjectID = "X5E-K2-U55"; */
+"X5E-K2-U55.text" = "سوف يتم تفعيل حسابك قريبا";
+
+/* Class = "UILabel"; text = "Reset Password"; ObjectID = "Y2n-kR-I74"; */
+"Y2n-kR-I74.text" = "إستعادة كلمة السر";
+
+/* Class = "UIButton"; normalTitle = "SIGNUP"; ObjectID = "Zdn-WY-0L5"; */
+"Zdn-WY-0L5.normalTitle" = "إنشاء حساب";
+
+/* Class = "UIButton"; normalTitle = "CONFIRM"; ObjectID = "aEY-zp-j1V"; */
+"aEY-zp-j1V.normalTitle" = "تأكيد";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "bBl-NR-9pS"; */
+"bBl-NR-9pS.placeholder" = "كلمة السر";
+
+/* Class = "UIButton"; normalTitle = "+965"; ObjectID = "cKC-Uk-4p7"; */
+"cKC-Uk-4p7.normalTitle" = "+965";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dVo-n6-N0r"; */
+"dVo-n6-N0r.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Confirm Password"; ObjectID = "hvG-fy-FZr"; */
+"hvG-fy-FZr.placeholder" = "تأكيد كلمة السر";
+
+/* Class = "UILabel"; text = "Your Phone Number is Activated"; ObjectID = "iBy-8f-3xJ"; */
+"iBy-8f-3xJ.text" = "تم تفعيل رقم جوالك";
+
+/* Class = "UIButton"; normalTitle = "+965"; ObjectID = "ksD-Sc-bGi"; */
+"ksD-Sc-bGi.normalTitle" = "+965";
+
+/* Class = "UIButton"; normalTitle = "Send again"; ObjectID = "ngB-4f-mQQ"; */
+"ngB-4f-mQQ.normalTitle" = "أرسل مجددا";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "nv9-w5-xZE"; */
+"nv9-w5-xZE.placeholder" = "كلمة السر";
+
+/* Class = "UILabel"; text = "+01234567899"; ObjectID = "oKG-hv-VFG"; */
+"oKG-hv-VFG.text" = "+01234567899";
+
+/* Class = "UILabel"; text = "Didn't recieve a code ?"; ObjectID = "pob-5z-35h"; */
+"pob-5z-35h.text" = "لم يصلك كود التفعيل ؟";
+
+/* Class = "UILabel"; text = "Successful Registeration"; ObjectID = "qZB-a0-KOF"; */
+"qZB-a0-KOF.text" = "تم التسجيل بنجاح";
+
+/* Class = "UIButton"; normalTitle = "+965"; ObjectID = "sXH-LF-F02"; */
+"sXH-LF-F02.normalTitle" = "+965";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "vbk-gG-k8O"; */
+"vbk-gG-k8O.text" = "سياسة الخصوصية";
+
+/* Class = "UILabel"; text = "Check Phone Number"; ObjectID = "xHv-sY-pm7"; */
+"xHv-sY-pm7.text" = "تأكد من رقم جوالك";
+
+/* Class = "UIButton"; normalTitle = "CONFIRM"; ObjectID = "xow-MJ-zzV"; */
+"xow-MJ-zzV.normalTitle" = "تأكيد";
+
+/* Class = "UIButton"; normalTitle = "BY CLICKING ON SIGNUP, YOU AGREE TO THE TERMS AND USER POLICY"; ObjectID = "zS1-cL-od5"; */
+"zS1-cL-od5.normalTitle" = "بالنقر فوق الاشتراك ، فإنك توافق على الشروط وسياسة المستخدم";
+
+/* Class = "UIButton"; normalTitle = "Complete Payment"; ObjectID = "bWb-fd-89N"; */
+"bWb-fd-89N.normalTitle" = "اكمال الدفع";

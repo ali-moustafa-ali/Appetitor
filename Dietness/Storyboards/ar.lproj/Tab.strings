@@ -1,0 +1,104 @@
+
+/* Class = "UIButton"; normalTitle = "MENU"; ObjectID = "1RE-vY-aUn"; */
+"1RE-vY-aUn.normalTitle" = "القائمة";
+
+/* Class = "UIButton"; normalTitle = "Freeze"; ObjectID = "4pw-GV-kPc"; */
+"4pw-GV-kPc.normalTitle" = "تجميد";
+
+/* Class = "UITextField"; placeholder = "Date of Birth"; ObjectID = "501-Ii-JvJ"; */
+"501-Ii-JvJ.placeholder" = "تاريخ الميلاد";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "8SU-iN-wIl"; */
+"8SU-iN-wIl.text" = "أهلا";
+
+/* Class = "UITextField"; placeholder = "Email Address"; ObjectID = "BRw-BD-jQM"; */
+"BRw-BD-jQM.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "Epy-29-0tV"; */
+"Epy-29-0tV.placeholder" = "الإسم بالكامل";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "Izl-E1-4MB"; */
+"Izl-E1-4MB.text" = "اهلا";
+
+/* Class = "UIButton"; normalTitle = "CHANGE PASSWORD"; ObjectID = "Lut-is-kud"; */
+"Lut-is-kud.normalTitle" = "تغيير كلمة السر";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MA8-4U-0g8"; */
+"MA8-4U-0g8.text" = "Label";
+
+/* Class = "UILabel"; text = "User Name"; ObjectID = "MoF-Py-z0d"; */
+"MoF-Py-z0d.text" = "إسم المستخدم";
+
+/* Class = "UITabBarItem"; title = "My Profile"; ObjectID = "NGL-Zf-whR"; */
+"NGL-Zf-whR.title" = "حسابي";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "OQQ-eX-Q83"; */
+"OQQ-eX-Q83.text" = "أهلا";
+
+/* Class = "UILabel"; text = "Basic Information"; ObjectID = "Pom-vW-zzz"; */
+"Pom-vW-zzz.text" = "البيانات الشخصية";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "R3p-lq-KpX"; */
+"R3p-lq-KpX.text" = "Label";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "Rnp-JM-dpN"; */
+"Rnp-JM-dpN.text" = "أهلا";
+
+/* Class = "UIButton"; normalTitle = "ع"; ObjectID = "Tue-85-m70"; */
+"Tue-85-m70.normalTitle" = "E";
+
+/* Class = "UILabel"; text = "MOHAMED ALAA"; ObjectID = "bMQ-xx-4Ir"; */
+"bMQ-xx-4Ir.text" = "MOHAMED ALAA";
+
+/* Class = "UILabel"; text = "Leftover Box"; ObjectID = "c0b-IP-7Xg"; */
+"c0b-IP-7Xg.text" = "الصناديق المتبقية";
+
+/* Class = "UIButton"; normalTitle = "CHANGE ADDRESS"; ObjectID = "eAm-Ak-IFT"; */
+"eAm-Ak-IFT.normalTitle" = "تغيير العنوان";
+
+/* Class = "UITabBarItem"; title = "Menu"; ObjectID = "gFU-lT-g2B"; */
+"gFU-lT-g2B.title" = "القائمة";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium cupidatat non proident, sunt odioque civiuda."; ObjectID = "gP4-ol-xOQ"; */
+"gP4-ol-xOQ.text" = "لتجديد إشتراكك برجاء الضغط على تجديد الإشتراك
+برجاء العلم أنه في حالة عدم أنك لم تختر وجباتك قبل تاريخ الطلب بيومين، سيتم إختيار الوجبات تلقائياً من السيستم.
+";
+
+/* Class = "UIButton"; normalTitle = "LOGOUT"; ObjectID = "hkQ-tR-1Ii"; */
+"hkQ-tR-1Ii.normalTitle" = "تسجيل الخروج";
+
+/* Class = "UIButton"; normalTitle = "SAVE"; ObjectID = "jhc-Tj-tfA"; */
+"jhc-Tj-tfA.normalTitle" = "حفظ";
+
+/* Class = "UITabBarItem"; title = "Menu"; ObjectID = "m1I-Rv-3Dc"; */
+"m1I-Rv-3Dc.title" = "القائمة";
+
+/* Class = "UILabel"; text = "Starting at 2021/02/08 to 2021/03/10"; ObjectID = "nb1-Th-ONv"; */
+"nb1-Th-ONv.text" = "Starting at 2021/02/08 to 2021/03/10";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "ogI-yl-JTh"; */
+"ogI-yl-JTh.placeholder" = "رقم الجوال";
+
+/* Class = "UILabel"; text = "MOHAMED ALAA"; ObjectID = "sXd-go-6Ah"; */
+"sXd-go-6Ah.text" = "MOHAMED ALAA";
+
+/* Class = "UIButton"; normalTitle = "RENEWAL"; ObjectID = "svZ-9b-lT2"; */
+"svZ-9b-lT2.normalTitle" = "تجديد";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "vF3-sM-6TO"; */
+"vF3-sM-6TO.title" = "الإعدادات";
+
+/* Class = "UILabel"; text = "22"; ObjectID = "vGe-UH-ArW"; */
+"vGe-UH-ArW.text" = "--";
+
+/* Class = "UILabel"; text = "MOHAMED ALAA"; ObjectID = "vy3-Iy-1wh"; */
+"vy3-Iy-1wh.text" = "MOHAMED ALAA";
+
+/* Class = "UIButton"; normalTitle = "Order"; ObjectID = "zGB-0e-HN6"; */
+"zGB-0e-HN6.normalTitle" = "طلب";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zvc-Sx-9tk"; */
+"zvc-Sx-9tk.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Delete Order"; ObjectID = "Qec-2l-Ozd"; */
+"Qec-2l-Ozd.normalTitle" = "مسح الطلب";
