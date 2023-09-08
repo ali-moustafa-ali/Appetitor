@@ -312,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				D975DBBA25E3273000883435 /* SideMenuItemsVC.swift */,
+				EFEA0D7D2AABB46E0062C175 /* ShowPackagesVC */,
 				6E36843C25D837E900B7E238 /* MainVC */,
 				6E35C26B25D8914600847C2A /* OurPackagesVC */,
 				6E35C27225D8A90100847C2A /* PackagePopUpVC */,
@@ -322,7 +323,6 @@
 		6E36843C25D837E900B7E238 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
-				EFEA0D7D2AABB46E0062C175 /* ShowPackagesVC */,
 				6E36843D25D8380400B7E238 /* MainVC.swift */,
 				6E36843F25D83A8900B7E238 /* MainCell.swift */,
 			);

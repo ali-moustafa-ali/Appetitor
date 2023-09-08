@@ -32,85 +32,25 @@ class SignupVC: UIViewController {
     }
     
     
-    func shortcutToCompleteDesign(){
-        let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
-        vc.new = true
-        vc.showDeliverySwitch = self.showDeliverySwitch
-        vc.note = self.note
-        
-        vc.didAddAddress = { [weak self] in
-            let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
-            otpVC.comingFrom = "signup"
-            otpVC.type = "email"
-            otpVC.email = self?.emailTextField.text ?? ""
-            otpVC.autoActive = self?.autoActive
-            self?.navigationController?.pushViewController(otpVC, animated: true)
-        }
-        
-        self.present(vc, animated: true, completion: nil)
-    }
+//    func shortcutToCompleteDesign(){
+//        let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
+//        vc.new = true
+//        vc.showDeliverySwitch = self.showDeliverySwitch
+//        vc.note = self.note
+//
+//        vc.didAddAddress = { [weak self] in
+//            let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
+//            otpVC.comingFrom = "signup"
+//            otpVC.type = "email"
+//            otpVC.email = self?.emailTextField.text ?? ""
+//            otpVC.autoActive = self?.autoActive
+//            self?.navigationController?.pushViewController(otpVC, animated: true)
+//        }
+//
+//        self.present(vc, animated: true, completion: nil)
+//    }
+
     
-    func signup(){
-        self.view.makeToastActivity(.center)
-        
-        guard let planId = planId else {
-            
-            self.view.makeToast("please provide plan id")
-            
-            return
-        }
-        
-        Connect.default.request(RegisterationConnector.signup(name: fullNameTextField.text ?? "",
-                                                              mobile: phoneTextField.text ?? "",
-                                                              email: emailTextField.text ?? "",
-                                                              password: passwordTextField.text ?? "" ,
-                                                              code: code,
-                                                              planId: planId)).decoded(toType: SignUpResponse.self).observe {
-            [weak self] (result) in
-            guard let self = self else{return}
-            
-            self.view.hideToastActivity()
-            switch result{
-            case .success(let data):
-                if let result = data.result{
-                    
-                    let setting = SettingsManager()
-                    setting.updateUser(user: result.user)
-                    setting.setUserToken(value: result.token ?? "")
-                    print("user token : \(SettingsManager.init().getUserToken())")
-                    
-                    let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
-                    vc.new = true
-                    vc.showDeliverySwitch = self.showDeliverySwitch
-                    vc.note = self.note
-                    
-                    vc.didAddAddress = { [weak self] in
-                        let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
-                        otpVC.comingFrom = "signup"
-                        otpVC.type = "email"
-                        otpVC.email = self?.emailTextField.text ?? ""
-                        otpVC.autoActive = self?.autoActive
-                        self?.navigationController?.pushViewController(otpVC, animated: true)
-                    }
-                    
-                    self.present(vc, animated: true, completion: nil)
-                }else{
-                    
-                    self.view.makeToast(data.message)
-                }
-            case .failure(let error):
-                
-                // MARK: shortcut
-                
-                self.shortcutToCompleteDesign()
-                
-                
-                
-                
-                self.view.makeToast(error.localizedDescription)
-            }
-        }
-    }
     func getRules(){
         self.view.makeToastActivity(.center)
         Connect.default.request(MainConnector.setting).decoded(toType: Setting.self).observe { (result) in
@@ -132,9 +72,28 @@ class SignupVC: UIViewController {
         }
     }
     
+    func showUserInfoScreen(){
+        let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
+//        vc.new = true
+//        vc.showDeliverySwitch = self.showDeliverySwitch
+//        vc.note = self.note
+        
+        vc.didAddAddress = { [weak self] in
+            let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
+            otpVC.comingFrom = "signup"
+            otpVC.type = "email"
+            otpVC.email = self?.emailTextField.text ?? ""
+            otpVC.autoActive = self?.autoActive
+            self?.navigationController?.pushViewController(otpVC, animated: true)
+        }
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    
     // MARK: Actions
     @IBAction func signup(_ sender: Any) {
-        signup()
+//        signup()
         
     }
     @IBAction func loginBtnAction(_ sender: Any) {
@@ -165,3 +124,59 @@ class SignupVC: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 }
+
+
+
+//func signup(){
+//    self.view.makeToastActivity(.center)
+//
+//    guard let planId = planId else {
+//
+//        self.view.makeToast("please provide plan id")
+//
+//        return
+//    }
+//
+//    Connect.default.request(RegisterationConnector.signup(name: fullNameTextField.text ?? "",
+//                                                          mobile: phoneTextField.text ?? "",
+//                                                          email: emailTextField.text ?? "",
+//                                                          password: passwordTextField.text ?? "" ,
+//                                                          code: code,
+//                                                          planId: planId)).decoded(toType: SignUpResponse.self).observe {
+//        [weak self] (result) in
+//        guard let self = self else{return}
+//
+//        self.view.hideToastActivity()
+//        switch result{
+//        case .success(let data):
+//            if let result = data.result{
+//
+//                let setting = SettingsManager()
+//                setting.updateUser(user: result.user)
+//                setting.setUserToken(value: result.token ?? "")
+//                print("user token : \(SettingsManager.init().getUserToken())")
+//
+//                let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
+//                vc.new = true
+//                vc.showDeliverySwitch = self.showDeliverySwitch
+//                vc.note = self.note
+//
+//                vc.didAddAddress = { [weak self] in
+//                    let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
+//                    otpVC.comingFrom = "signup"
+//                    otpVC.type = "email"
+//                    otpVC.email = self?.emailTextField.text ?? ""
+//                    otpVC.autoActive = self?.autoActive
+//                    self?.navigationController?.pushViewController(otpVC, animated: true)
+//                }
+//
+//                self.present(vc, animated: true, completion: nil)
+//            }else{
+//
+//                self.view.makeToast(data.message)
+//            }
+//        case .failure(let error):
+//            self.view.makeToast(error.localizedDescription)
+//        }
+//    }
+//}
