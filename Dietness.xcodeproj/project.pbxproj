@@ -114,6 +114,7 @@
 		EFEA0D7C2AAB95890062C175 /* FoodSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA0D7B2AAB95890062C175 /* FoodSystem.swift */; };
 		EFEA0D802AABB4920062C175 /* ShowPackagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA0D7E2AABB4920062C175 /* ShowPackagesVC.swift */; };
 		EFEA0D882AABC28B0062C175 /* SportsTargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA0D872AABC28B0062C175 /* SportsTargetVC.swift */; };
+		EFEA0D8A2AABC50C0062C175 /* SportsTargetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA0D892AABC50C0062C175 /* SportsTargetModel.swift */; };
 		F65E5F32261DF4C500111116 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F65E5F34261DF4C500111116 /* Login.storyboard */; };
 		F6601A49265129780082BDDD /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6601A48265129780082BDDD /* PaymentRequest.swift */; };
 		F661A7602607B43600076140 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F661A75F2607B43600076140 /* NotificationHandler.swift */; };
@@ -243,6 +244,7 @@
 		EFEA0D7B2AAB95890062C175 /* FoodSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSystem.swift; sourceTree = "<group>"; };
 		EFEA0D7E2AABB4920062C175 /* ShowPackagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPackagesVC.swift; sourceTree = "<group>"; };
 		EFEA0D872AABC28B0062C175 /* SportsTargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTargetVC.swift; sourceTree = "<group>"; };
+		EFEA0D892AABC50C0062C175 /* SportsTargetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTargetModel.swift; sourceTree = "<group>"; };
 		F65E5F33261DF4C500111116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		F65E5F36261DF4D000111116 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Login.strings; sourceTree = "<group>"; };
 		F6601A48265129780082BDDD /* PaymentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
@@ -644,6 +646,7 @@
 				F68F68ED26567C9900E8413D /* OtpResponse.swift */,
 				D914D549265D47C3009690FD /* GetOrderByDayResponse.swift */,
 				0B74751026D6905800A0DF08 /* Setting.swift */,
+				EFEA0D892AABC50C0062C175 /* SportsTargetModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -949,6 +952,7 @@
 				6E35C27625D8ACBB00847C2A /* PlanCell.swift in Sources */,
 				D93BF92B25D5FBB300837CF7 /* Toast.swift in Sources */,
 				F67E85CD2696F8BA0027CD4F /* DietnessServices.swift in Sources */,
+				EFEA0D8A2AABC50C0062C175 /* SportsTargetModel.swift in Sources */,
 				D9D33D1225D3E515002724C7 /* ConnectMiddleware.swift in Sources */,
 				6E4CC3B925D9FA5D003293FA /* TabConnector.swift in Sources */,
 				D9485BDB25E485E8005D2DC7 /* PrivacyPolicyVC.swift in Sources */,

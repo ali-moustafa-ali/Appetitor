@@ -14,11 +14,42 @@ class SportsTargetVC: UIViewController {
     
     @IBOutlet weak var titleLbl: UILabel!
     
+    var choseSportsTargetCompletion: ((SportsTargetVC, Int)->())?
+    
+    var SportsTargets: [SportsTarget] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLbl.text = "Sports Target".localized
+        titleLbl.text = "What is your sporting goal?".localized
         
+        
+        getSportsTargets()
+        
+    }
+    
+    func getSportsTargets() {
+        self.view.makeToastActivity(.center)
+        Connect.default.request(MainConnector.sportTargets).decoded(toType: SportsTargetModel.self).observe { (result) in
+            self.view.hideToastActivity()
+            switch result {
+    
+            case .success(let data):
+                print("SportsTargets success")
+                self.SportsTargets = data.result ?? []
+                print(self.SportsTargets)
+
+                
+                DispatchQueue.main.async {
+                    self.sportsTargetTable.reloadData()
+
+                }
+                
+            case .failure(let error):
+                print("packages failed")
+                self.view.makeToast(error.localizedDescription)
+            }
+        }
     }
 
 
@@ -28,53 +59,49 @@ class SportsTargetVC: UIViewController {
 extension SportsTargetVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return packages.count
+        return SportsTargets.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SportsTargetCell", for: indexPath) as! SportsTargetCell
+        
+        let title = Helper.language == "ar" ? SportsTargets[indexPath.row].nameAr : SportsTargets[indexPath.row].nameEn
+        
+        cell.titleLbl.text = title
+        cell.bigTitleLbl.text = title
 
-//        let imgURL = "\(imageURL)/\(packages[indexPath.row].image ?? "")"
+        
+//        let imgURL = "\(imageURL)/\(SportsTargets[indexPath.row].image ?? "")"
 //
 //        if let url = URL(string: imgURL) {
 //            cell.packageImage.sd_setImage(with: url, placeholderImage: UIImage.init(named: "default"))
 //        }
-//
-//        cell.moreBtnOutlet.onTap { [weak self] in
-//
-//            let vc = self?.storyboard?.instantiateViewController(identifier: "PackagePopUpVC") as! PackagePopUpVC
-//
-//            vc.package = self?.packages[indexPath.row]
-//            vc.imageURL = imgURL
-//
-//            //
-//            vc.didTapSubscribe = {[weak self] planId in
-//                guard let self = self else{return}
-//
-//                self.chosePackageNowPushSignup!(self , planId)
-//
-//            }
-//
-//            self?.present(vc, animated: true, completion: nil)
-//        }
+        
+        
+        cell.moreBtnOutlet.onTap { [weak self] in
+
+            guard let self = self, let targetId = SportsTargets[indexPath.row].id else{return}
+            
+            self.choseSportsTargetCompletion!(self, targetId)
+
+        }
 
         return cell
     }
-
-
 }
 
 class SportsTargetCell: UITableViewCell {
 
+    @IBOutlet weak var bigTitleLbl: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
     
-    @IBOutlet weak var packageImage: UIImageView!
+    
     @IBOutlet weak var moreBtnOutlet: UIButton!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 

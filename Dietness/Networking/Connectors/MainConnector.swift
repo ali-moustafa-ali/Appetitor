@@ -16,7 +16,9 @@ enum MainConnector: Connector, AuthorizedConnector{
     case getPackagesById(id:Int)
     case getCategories
     case getSlider
+    
     case foodSystems
+    case sportTargets
     case setting
 
     var baseURL: URL{
@@ -33,6 +35,8 @@ enum MainConnector: Connector, AuthorizedConnector{
     
     var endpoint: String{
         switch self {
+        case .sportTargets:
+            return EndPoints.sportTargets
         case .foodSystems:
             return EndPoints.foodSystems
         case .getPackages:

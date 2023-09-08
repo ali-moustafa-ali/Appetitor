@@ -22,7 +22,11 @@ class SignupVC: UIViewController {
     var note = ""
     var autoActive = false
     var showDeliverySwitch = false
+    
+    
     var planId: Int?
+    var sportingGoalId: Int
+    
     
     @IBOutlet weak var stepIndicator: StepIndicatorView!
     
@@ -72,28 +76,28 @@ class SignupVC: UIViewController {
         }
     }
     
-    func showUserInfoScreen(){
-        let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
-//        vc.new = true
-//        vc.showDeliverySwitch = self.showDeliverySwitch
-//        vc.note = self.note
+    func showSportsTargetScreen(){
         
-        vc.didAddAddress = { [weak self] in
-            let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
-            otpVC.comingFrom = "signup"
-            otpVC.type = "email"
-            otpVC.email = self?.emailTextField.text ?? ""
-            otpVC.autoActive = self?.autoActive
-            self?.navigationController?.pushViewController(otpVC, animated: true)
+        let sportsTargetVc = SportsTargetVC.instantiate(appStoryboard: .main) as! SportsTargetVC
+        
+        sportsTargetVc.choseSportsTargetCompletion = { [weak self] vc , targetId in
+            
+            vc.dismiss(animated: true)
+            
+            self?.sportingGoalId = targetId
+            
+            print(targetId, "tar idddd")
         }
-        
-        self.present(vc, animated: true, completion: nil)
+    
+        self.present(sportsTargetVc, animated: true, completion: nil)
     }
     
     
     // MARK: Actions
     @IBAction func signup(_ sender: Any) {
 //        signup()
+        
+        showSportsTargetScreen()
         
     }
     @IBAction func loginBtnAction(_ sender: Any) {

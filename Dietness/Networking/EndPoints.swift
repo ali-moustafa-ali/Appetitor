@@ -45,6 +45,7 @@ class EndPoints{
     // home
     static let slider = "/getsliders"
     static let foodSystems = "/food-systems"
+    static let sportTargets = "/sport-targets"
 
     
     
