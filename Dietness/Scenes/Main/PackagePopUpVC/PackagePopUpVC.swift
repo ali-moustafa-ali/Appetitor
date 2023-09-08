@@ -23,6 +23,8 @@ class PackagePopUpVC: UIViewController {
     var names : [String] = []
     var selectedPlan:Plan?
     var didTapSubscribe:(()->())?
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let url = URL(string: imageURL) {

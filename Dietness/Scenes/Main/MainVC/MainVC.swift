@@ -52,7 +52,9 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        getPackages()
+//        getPackages()
+        
+        getFoodSystems()
         
     }
     
@@ -61,6 +63,37 @@ class MainVC: UIViewController {
     
     //MARK: Api
 
+    
+    
+    func getFoodSystems() {
+        self.view.makeToastActivity(.center)
+        
+        Connect.default.request(MainConnector.getPackages).decoded(toType: PackagesResponse.self).observe {
+            (result) in
+            
+            self.view.hideToastActivity()
+            
+            switch result {
+                
+            case .success(let data):
+                print("packages success")
+                self.packages = data.result?.packages ?? []
+                print(self.packages)
+                self.imageURL = data.result?.image_url ?? ""
+                DispatchQueue.main.async {
+                    self.packagesTableView.reloadData()
+                    //                    self.pagerView.reloadData()
+                }
+                
+            case .failure(let error):
+                print("packages failed")
+                self.view.makeToast(error.localizedDescription)
+            }
+            
+        }
+    }
+    
+    
     func getPackages() {
         self.view.makeToastActivity(.center)
         Connect.default.request(MainConnector.getPackages).decoded(toType: PackagesResponse.self).observe { (result) in
