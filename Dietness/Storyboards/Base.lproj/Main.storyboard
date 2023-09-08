@@ -3,7 +3,7 @@
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -57,7 +57,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-k4-lLN">
-                                <rect key="frame" x="175.33333333333334" y="357" width="77.666666666666657" height="35.666666666666686"/>
+                                <rect key="frame" x="172.33333333333334" y="357" width="83.666666666666657" height="22.333333333333314"/>
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
                                 <nil key="textColor"/>
@@ -70,7 +70,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-c1-wo2">
-                                <rect key="frame" x="20" y="400.66666666666674" width="388" height="425.33333333333326"/>
+                                <rect key="frame" x="20" y="387.33333333333326" width="388" height="438.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MainCell" rowHeight="224" id="xWR-SZ-xkB" customClass="MainCell" customModule="Dietness" customModuleProvider="target">
@@ -111,7 +111,7 @@
                                                                                     </state>
                                                                                 </button>
                                                                             </subviews>
-                                                                            <color key="backgroundColor" name="PrimaryColor"/>
+                                                                            <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="trailing" secondItem="ABS-BN-3d0" secondAttribute="trailing" constant="10" id="4Yp-GL-J3Z"/>
                                                                                 <constraint firstItem="ABS-BN-3d0" firstAttribute="centerX" secondItem="a0O-Y1-q2H" secondAttribute="centerX" id="90F-tv-u2N"/>
@@ -195,7 +195,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="rV1-Iv-POj" firstAttribute="centerY" secondItem="anU-jm-9em" secondAttribute="centerY" id="1aC-tD-yD1"/>
                                             <constraint firstAttribute="trailing" secondItem="rV1-Iv-POj" secondAttribute="trailing" constant="10" id="FoS-lf-a9U"/>
@@ -245,7 +245,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y9J-u7-c6y"/>
-                        <color key="backgroundColor" name="AppWhiteColor"/>
+                        <color key="backgroundColor" red="0.0039215686274509803" green="0.67843137254901964" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ddw-k4-lLN" firstAttribute="top" secondItem="HgS-lc-qTc" secondAttribute="bottom" constant="20" id="1f7-Y7-z2D"/>
                             <constraint firstItem="y9J-u7-c6y" firstAttribute="trailing" secondItem="kWL-c1-wo2" secondAttribute="trailing" constant="20" id="3Zd-0D-wzV"/>
@@ -287,7 +287,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="014-SQ-bZ3">
-                                <rect key="frame" x="20" y="137" width="554" height="128"/>
+                                <rect key="frame" x="20" y="137" width="388" height="128"/>
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Ckq-OJ-QMI"/>
@@ -359,7 +359,7 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AuT-tK-vGT">
-                                <rect key="frame" x="16" y="47" width="562" height="70"/>
+                                <rect key="frame" x="16" y="47" width="396" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXi-Mj-rSD">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="70"/>
@@ -375,7 +375,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="66o-h4-7M3">
-                                        <rect key="frame" x="44" y="0.0" width="518" height="70"/>
+                                        <rect key="frame" x="44" y="0.0" width="352" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="oTL-1j-An7"/>
                                             <constraint firstAttribute="height" constant="70" id="uYz-q1-JSB"/>
@@ -385,7 +385,7 @@
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2K1-sd-OBI">
-                                <rect key="frame" x="20" y="285" width="554" height="587"/>
+                                <rect key="frame" x="20" y="285" width="388" height="587"/>
                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oTM-b0-RFG">
                                     <size key="itemSize" width="168" height="166"/>
@@ -633,7 +633,7 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="d79-7M-VQ8" firstAttribute="centerY" secondItem="lbo-GW-OfP" secondAttribute="centerY" id="4uO-Fg-PoH"/>
                                                             <constraint firstAttribute="width" constant="130" id="IlN-cb-YtP"/>
@@ -779,14 +779,14 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="AUh-JN-tgQ">
                                                     <rect key="frame" x="30" y="12.666666666666664" width="30" height="30"/>
-                                                    <color key="tintColor" name="PrimaryColor"/>
+                                                    <color key="tintColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="TOy-IR-e3E"/>
                                                         <constraint firstAttribute="height" constant="30" id="YDz-X1-hGd"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPw-Rq-nbL">
-                                                    <rect key="frame" x="88" y="11.666666666666664" width="40" height="32"/>
+                                                    <rect key="frame" x="88" y="17.666666666666668" width="42.333333333333343" height="20.000000000000004"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="17"/>
                                                     <color key="textColor" name="AppBlackColor"/>
                                                     <nil key="highlightedColor"/>
@@ -813,14 +813,14 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UDV-OK-tv2">
                                                     <rect key="frame" x="30" y="13.666666666666666" width="30" height="28.666666666666679"/>
-                                                    <color key="tintColor" name="PrimaryColor"/>
+                                                    <color key="tintColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="dgv-lQ-9eX"/>
                                                         <constraint firstAttribute="width" constant="30" id="smL-Wx-Yg1"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عربي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ4-QP-XVP">
-                                                    <rect key="frame" x="88" y="11.666666666666664" width="39.666666666666657" height="32"/>
+                                                    <rect key="frame" x="88" y="17.666666666666668" width="32" height="20.000000000000004"/>
                                                     <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="17"/>
                                                     <color key="textColor" name="AppBlackColor"/>
                                                     <nil key="highlightedColor"/>
@@ -872,9 +872,6 @@
         </namedColor>
         <namedColor name="AppWhiteColor">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="PrimaryColor">
-            <color red="0.98799997568130493" green="0.79600000381469727" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="seperatorColor">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

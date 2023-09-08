@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oWc-wf-FVA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oWc-wf-FVA">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,11 +27,11 @@
             <objects>
                 <viewController storyboardIdentifier="SettingVC" id="e7r-R1-rOf" customClass="SettingVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cYT-Fp-HvI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vt0-3S-hEd">
-                                <rect key="frame" x="16" y="60" width="125" height="60"/>
+                                <rect key="frame" x="16" y="60" width="135.66666666666666" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="agZ-i6-Vux">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="26"/>
@@ -54,7 +54,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOHAMED ALAA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy3-Iy-1wh">
-                                        <rect key="frame" x="0.0" y="34" width="125" height="26"/>
+                                        <rect key="frame" x="0.0" y="34" width="135.66666666666666" height="26"/>
                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="17"/>
                                         <color key="textColor" name="AppBlackColor"/>
                                         <nil key="highlightedColor"/>
@@ -314,7 +314,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAm-Ak-IFT">
-                                                                        <rect key="frame" x="10" y="4.6666666666666856" width="167" height="41"/>
+                                                                        <rect key="frame" x="10" y="10" width="167" height="30"/>
                                                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="15"/>
                                                                         <state key="normal" title="CHANGE ADDRESS">
                                                                             <color key="titleColor" name="AppBlackColor"/>
@@ -350,7 +350,7 @@
                                                                 <rect key="frame" x="195" y="0.0" width="187" height="50"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-is-kud">
-                                                                        <rect key="frame" x="10" y="4.6666666666666856" width="167" height="41"/>
+                                                                        <rect key="frame" x="10" y="10" width="167" height="30"/>
                                                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="15"/>
                                                                         <state key="normal" title="CHANGE PASSWORD">
                                                                             <color key="titleColor" name="AppBlackColor"/>
@@ -401,7 +401,7 @@
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" name="PrimaryColor"/>
+                                                                <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="jhc-Tj-tfA" firstAttribute="centerX" secondItem="Fk7-bD-3Ya" secondAttribute="centerX" id="2Zf-RZ-Eso"/>
                                                                     <constraint firstAttribute="height" constant="50" id="H2e-c0-iG6"/>
@@ -423,6 +423,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkQ-tR-1Ii">
                                                                         <rect key="frame" x="10" y="2" width="362" height="46"/>
+                                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="17"/>
                                                                         <state key="normal" title="LOGOUT">
                                                                             <color key="titleColor" name="AppBlackColor"/>
@@ -555,7 +556,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" id="wXo-99-asR" customClass="ProfileVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eVK-BB-MV9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fla-sT-M7E">
@@ -638,7 +639,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1KM-Bt-t2F" secondAttribute="trailing" constant="20" id="70y-Jt-qo6"/>
                                     <constraint firstAttribute="bottom" secondItem="1KM-Bt-t2F" secondAttribute="bottom" constant="20" id="Etn-xb-cXf"/>
@@ -659,7 +660,7 @@
                                         <rect key="frame" x="10" y="2" width="81" height="46"/>
                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="17"/>
                                         <state key="normal" title="RENEWAL">
-                                            <color key="titleColor" name="PrimaryColor"/>
+                                            <color key="titleColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="renewalBtnAction:" destination="wXo-99-asR" eventType="touchUpInside" id="mUG-ge-WFR"/>
@@ -700,7 +701,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="1i4-xk-ODf"/>
                                             <constraint firstAttribute="height" constant="50" id="C6N-eF-Wwd"/>
@@ -922,7 +923,7 @@ Please note that if you don't choose your meals two days before the order date, 
             <objects>
                 <viewController id="rCq-TF-Vyc" customClass="MenuVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sab-S0-Caa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVt-QB-32Q">
@@ -1069,7 +1070,7 @@ Please note that if you don't choose your meals two days before the order date, 
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z5m-JJ-JjJ">
                                                                                     <rect key="frame" x="30" y="38.333333333333321" width="100" height="98.666666666666657"/>
-                                                                                    <color key="tintColor" name="PrimaryColor"/>
+                                                                                    <color key="tintColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="100" id="MKH-b7-ajY"/>
                                                                                         <constraint firstAttribute="height" constant="100" id="xHV-9c-oBa"/>
@@ -1162,7 +1163,7 @@ Please note that if you don't choose your meals two days before the order date, 
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGB-0e-HN6">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
-                                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="VFT-Hs-ftO"/>
                                                         </constraints>
@@ -1181,7 +1182,7 @@ Please note that if you don't choose your meals two days before the order date, 
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qec-2l-Ozd">
                                                         <rect key="frame" x="0.0" y="50" width="374" height="50"/>
-                                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                                        <color key="backgroundColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="uYy-kY-nEa"/>
                                                         </constraints>
@@ -1440,25 +1441,25 @@ Please note that if you don't choose your meals two days before the order date, 
     </scenes>
     <designables>
         <designable name="501-Ii-JvJ">
-            <size key="intrinsicContentSize" width="91.333333333333329" height="33.666666666666664"/>
+            <size key="intrinsicContentSize" width="96" height="21.666666666666668"/>
         </designable>
         <designable name="BRw-BD-jQM">
-            <size key="intrinsicContentSize" width="101.66666666666667" height="33.666666666666664"/>
+            <size key="intrinsicContentSize" width="109" height="21.666666666666668"/>
         </designable>
         <designable name="Epy-29-0tV">
-            <size key="intrinsicContentSize" width="72.333333333333329" height="33.666666666666664"/>
+            <size key="intrinsicContentSize" width="76.666666666666671" height="21.666666666666668"/>
         </designable>
         <designable name="ogI-yl-JTh">
-            <size key="intrinsicContentSize" width="108" height="33.666666666666664"/>
+            <size key="intrinsicContentSize" width="114.66666666666667" height="21.666666666666668"/>
         </designable>
     </designables>
     <resources>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="cog" width="32" height="32"/>
         <image name="cutlery" width="32" height="32"/>
         <image name="headphone (1)" width="32" height="32"/>
         <image name="location" width="64" height="64"/>
-        <image name="logo" width="991" height="160"/>
+        <image name="logo" width="518" height="516.66668701171875"/>
         <image name="pin" width="32" height="32"/>
         <image name="user" width="32" height="32"/>
         <image name="welcome" width="38" height="38"/>
@@ -1469,7 +1470,7 @@ Please note that if you don't choose your meals two days before the order date, 
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryColor">
-            <color red="0.98799997568130493" green="0.79600000381469727" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0039215686274509803" green="0.67843137254901964" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
