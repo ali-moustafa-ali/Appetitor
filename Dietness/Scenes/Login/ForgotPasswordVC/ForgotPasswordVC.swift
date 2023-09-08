@@ -22,7 +22,7 @@ class ForgotPasswordVC: UIViewController {
 
 
     var type:String = "email"
-    var code:String = "965"
+    var code:String = "966"
 
     override func viewDidLoad() {
         super.viewDidLoad()

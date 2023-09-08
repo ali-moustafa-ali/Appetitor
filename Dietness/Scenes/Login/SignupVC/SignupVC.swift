@@ -18,7 +18,7 @@ class SignupVC: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var countryCodeButton: UIButton!
 
-    var code = "965"
+    var code = "966"
     var note = ""
     var autoActive = false
     var showDeliverySwitch = false

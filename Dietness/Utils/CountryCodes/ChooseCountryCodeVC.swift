@@ -12,8 +12,8 @@ class ChooseCountryCodeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var countries = [Country]()
-    let letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    let arabicLetters = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ق ك ل م ن ه و ي"
+    let letters = ["E","S"]
+    let arabicLetters = "ا م "
     var arabicLettersArray:[String] = []
     var countriesDictionary = [String:[Country]]()
     var didSelectCountry:((Country)->())?

@@ -81,7 +81,7 @@
 "bBl-NR-9pS.placeholder" = "كلمة السر";
 
 /* Class = "UIButton"; normalTitle = "+965"; ObjectID = "cKC-Uk-4p7"; */
-"cKC-Uk-4p7.normalTitle" = "+965";
+"cKC-Uk-4p7.normalTitle" = "+966";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "dVo-n6-N0r"; */
 "dVo-n6-N0r.text" = "Label";
@@ -92,8 +92,8 @@
 /* Class = "UILabel"; text = "Your Phone Number is Activated"; ObjectID = "iBy-8f-3xJ"; */
 "iBy-8f-3xJ.text" = "تم تفعيل رقم جوالك";
 
-/* Class = "UIButton"; normalTitle = "+965"; ObjectID = "ksD-Sc-bGi"; */
-"ksD-Sc-bGi.normalTitle" = "+965";
+/* Class = "UIButton"; normalTitle = "+966"; ObjectID = "ksD-Sc-bGi"; */
+"ksD-Sc-bGi.normalTitle" = "+966";
 
 /* Class = "UIButton"; normalTitle = "Send again"; ObjectID = "ngB-4f-mQQ"; */
 "ngB-4f-mQQ.normalTitle" = "أرسل مجددا";
@@ -110,8 +110,8 @@
 /* Class = "UILabel"; text = "Successful Registeration"; ObjectID = "qZB-a0-KOF"; */
 "qZB-a0-KOF.text" = "تم التسجيل بنجاح";
 
-/* Class = "UIButton"; normalTitle = "+965"; ObjectID = "sXH-LF-F02"; */
-"sXH-LF-F02.normalTitle" = "+965";
+/* Class = "UIButton"; normalTitle = "+966"; ObjectID = "sXH-LF-F02"; */
+"sXH-LF-F02.normalTitle" = "+966";
 
 /* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "vbk-gG-k8O"; */
 "vbk-gG-k8O.text" = "سياسة الخصوصية";
