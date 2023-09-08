@@ -16,6 +16,7 @@ class ShowPackagesVC: UIViewController {
     var packages : [Package] = []
     var imageURL = ""
 
+    var chosePackageNowPushSignup: ((ShowPackagesVC, Int)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,16 +78,12 @@ extension ShowPackagesVC: UITableViewDataSource, UITableViewDelegate {
             vc.package = self?.packages[indexPath.row]
             vc.imageURL = imgURL
 
-            vc.didTapSubscribe = {[weak self]  planId in
+            //
+            vc.didTapSubscribe = {[weak self] planId in
+                guard let self = self else{return}
+                
+                self.chosePackageNowPushSignup!(self , planId)
 
-                let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
-
-
-                vc.planId = planId
-
-
-                self?.navigationController?.pushViewController(vc, animated: true)
             }
 
             self?.present(vc, animated: true, completion: nil)

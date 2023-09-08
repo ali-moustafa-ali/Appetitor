@@ -146,10 +146,6 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
         return foodSystems.count
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        300
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
         
@@ -159,30 +155,33 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
         
         cell.moreBtnOutlet.onTap { [weak self] in
 //
-            let vc = self?.storyboard!.instantiateViewController(identifier: "ShowPackagesVC") as! ShowPackagesVC
-//
-//            vc.package = self?.packages[indexPath.row]
-////            vc.imageURL = imgURL
-//
-//            vc.didTapSubscribe = {[weak self]  planId in
-//
-//                let storyboard = UIStoryboard(name: "Login", bundle: nil)
-//                let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
-//
-//
-//                vc.planId = planId
-//
-//
-//                self?.navigationController?.pushViewController(vc, animated: true)
-//            }
-//
+            let vc = self!.pushToSignUp()
+            
             self?.present(vc, animated: true, completion: nil)
         }
         
         return cell
     }
     
-    
+    func pushToSignUp()->ShowPackagesVC{
+        let vc = self.storyboard!.instantiateViewController(identifier: "ShowPackagesVC") as! ShowPackagesVC
+
+        vc.chosePackageNowPushSignup = { [weak self] showPackagesVC, planId in
+            
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+            vc.planId = planId
+            
+            showPackagesVC.dismiss(animated: true)
+
+
+            self?.navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        
+        return vc
+
+    }
 }
 
 //MARK: SLider
