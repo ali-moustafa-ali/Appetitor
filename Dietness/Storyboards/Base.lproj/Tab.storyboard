@@ -67,7 +67,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMh-N2-ZNF">
                                 <rect key="frame" x="234" y="60" width="164" height="46"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BGA-Wf-m7H">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BGA-Wf-m7H">
                                         <rect key="frame" x="0.0" y="8" width="164" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="qgW-mq-g9B"/>
@@ -593,25 +593,6 @@
                                     <constraint firstAttribute="height" constant="60" id="3HE-L4-CiN"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9C-LD-ZMY">
-                                <rect key="frame" x="234" y="60" width="164" height="56"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="vG9-iA-s2T">
-                                        <rect key="frame" x="0.0" y="8" width="164" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="13E-R9-0XK"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" name="AppWhiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="164" id="1pK-tN-iJ8"/>
-                                    <constraint firstAttribute="bottom" secondItem="vG9-iA-s2T" secondAttribute="bottom" constant="8" id="8RY-V8-DV5"/>
-                                    <constraint firstAttribute="trailing" secondItem="vG9-iA-s2T" secondAttribute="trailing" id="EEG-JM-gTJ"/>
-                                    <constraint firstItem="vG9-iA-s2T" firstAttribute="top" secondItem="U9C-LD-ZMY" secondAttribute="top" constant="8" id="dna-Rg-1r5"/>
-                                    <constraint firstItem="vG9-iA-s2T" firstAttribute="leading" secondItem="U9C-LD-ZMY" secondAttribute="leading" id="suu-sV-Rzy"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvE-rB-YmC" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
                                 <rect key="frame" x="20" y="128" width="374" height="200"/>
                                 <subviews>
@@ -733,12 +714,10 @@ Please note that if you don't choose your meals two days before the order date, 
                         <viewLayoutGuide key="safeArea" id="hnj-Dy-LDk"/>
                         <color key="backgroundColor" name="AppWhiteColor"/>
                         <constraints>
-                            <constraint firstItem="U9C-LD-ZMY" firstAttribute="top" secondItem="hnj-Dy-LDk" secondAttribute="top" constant="16" id="8Qg-6G-ryx"/>
                             <constraint firstItem="Ebg-ly-xho" firstAttribute="top" secondItem="hvE-rB-YmC" secondAttribute="bottom" constant="20" id="Hoe-Q1-wOc"/>
                             <constraint firstItem="XtH-a2-o3T" firstAttribute="centerX" secondItem="eVK-BB-MV9" secondAttribute="centerX" id="JBd-4w-b8H"/>
                             <constraint firstItem="fla-sT-M7E" firstAttribute="top" secondItem="hnj-Dy-LDk" secondAttribute="top" constant="16" id="Qcb-Ek-kIY"/>
                             <constraint firstItem="Ebg-ly-xho" firstAttribute="centerX" secondItem="eVK-BB-MV9" secondAttribute="centerX" id="SfP-Fy-6IY"/>
-                            <constraint firstItem="hnj-Dy-LDk" firstAttribute="trailing" secondItem="U9C-LD-ZMY" secondAttribute="trailing" constant="16" id="TYm-jk-4Uh"/>
                             <constraint firstItem="XtH-a2-o3T" firstAttribute="leading" secondItem="hnj-Dy-LDk" secondAttribute="leading" constant="20" id="UQn-Rd-y9Q"/>
                             <constraint firstItem="hnj-Dy-LDk" firstAttribute="trailing" secondItem="XtH-a2-o3T" secondAttribute="trailing" constant="20" id="aXd-L6-weA"/>
                             <constraint firstItem="fla-sT-M7E" firstAttribute="leading" secondItem="hnj-Dy-LDk" secondAttribute="leading" constant="16" id="c7D-3l-QfZ"/>
@@ -810,7 +789,7 @@ Please note that if you don't choose your meals two days before the order date, 
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2k-WJ-ex4">
                                 <rect key="frame" x="234" y="60" width="164" height="46"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CLC-7g-ArN">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CLC-7g-ArN">
                                         <rect key="frame" x="0.0" y="8" width="164" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ZQG-JX-yRc"/>
@@ -929,7 +908,7 @@ Please note that if you don't choose your meals two days before the order date, 
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVt-QB-32Q">
                                 <rect key="frame" x="230" y="62" width="164" height="46"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="RON-O8-Acc">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RON-O8-Acc">
                                         <rect key="frame" x="0.0" y="8" width="164" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="toI-pF-zKl"/>
@@ -1069,7 +1048,7 @@ Please note that if you don't choose your meals two days before the order date, 
                                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="175"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Z5m-JJ-JjJ">
-                                                                                    <rect key="frame" x="30" y="38.333333333333321" width="100" height="98.666666666666657"/>
+                                                                                    <rect key="frame" x="30" y="38.333333333333321" width="100" height="98.666666666666686"/>
                                                                                     <color key="tintColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="100" id="MKH-b7-ajY"/>
@@ -1459,7 +1438,6 @@ Please note that if you don't choose your meals two days before the order date, 
         <image name="cutlery" width="32" height="32"/>
         <image name="headphone (1)" width="32" height="32"/>
         <image name="location" width="64" height="64"/>
-        <image name="logo" width="1024" height="1024"/>
         <image name="pin" width="32" height="32"/>
         <image name="user" width="32" height="32"/>
         <image name="welcome" width="38" height="38"/>

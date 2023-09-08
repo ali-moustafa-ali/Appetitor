@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUt-2m-o0o">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -27,7 +27,7 @@
             <objects>
                 <viewController storyboardIdentifier="LoginVC" modalPresentationStyle="fullScreen" id="OUt-2m-o0o" customClass="LoginVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BgL-z1-L9p">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFP-Te-9B6">
@@ -44,12 +44,6 @@
                                     <action selector="bckBtnAction:" destination="OUt-2m-o0o" eventType="touchUpInside" id="7MD-hc-aVC"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Kgr-J4-TsI">
-                                <rect key="frame" x="125" y="50" width="178" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jAW-AU-Rrn"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXp-dx-j88">
                                 <rect key="frame" x="30.000000000000004" y="135" width="42.333333333333343" height="20"/>
                                 <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="17"/>
@@ -57,13 +51,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rb9-Vs-LLR">
-                                <rect key="frame" x="30" y="259" width="368" height="180"/>
+                                <rect key="frame" x="30" y="259" width="333" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDx-WY-TE0" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="368" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bA-WL-Frb" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="0.0" width="352" height="50"/>
+                                                <rect key="frame" x="8" y="0.0" width="317" height="50"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -91,10 +85,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5LQ-zb-fsC" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65" width="368" height="50"/>
+                                        <rect key="frame" x="0.0" y="65" width="333" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SDh-Au-wjy" customClass="JVFloatLabeledTextField">
-                                                <rect key="frame" x="8" y="0.0" width="280" height="50"/>
+                                                <rect key="frame" x="8" y="0.0" width="245" height="50"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                 <userDefinedRuntimeAttributes>
@@ -136,13 +130,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8T-xr-ROu" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="130" width="368" height="50"/>
+                                        <rect key="frame" x="0.0" y="130" width="333" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="EKJ-Vl-KsW">
-                                                <rect key="frame" x="8" y="0.0" width="352" height="50"/>
+                                                <rect key="frame" x="8" y="0.0" width="317" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBl-NR-9pS" customClass="JVFloatLabeledTextField">
-                                                        <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                         <userDefinedRuntimeAttributes>
@@ -152,7 +146,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7b-eu-UCw">
-                                                        <rect key="frame" x="322" y="0.0" width="30" height="50"/>
+                                                        <rect key="frame" x="287" y="0.0" width="30" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="IdS-EL-gL7"/>
                                                             <constraint firstAttribute="width" constant="30" id="QrR-ez-kdL"/>
@@ -192,13 +186,13 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2qs-VG-JTH">
-                                <rect key="frame" x="30" y="495.33333333333326" width="368" height="115"/>
+                                <rect key="frame" x="30" y="495.33333333333326" width="333" height="115"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itL-Kf-FPJ" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="368" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-bS-GC2">
-                                                <rect key="frame" x="10" y="2" width="348" height="46"/>
+                                                <rect key="frame" x="10" y="2" width="313" height="46"/>
                                                 <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="17"/>
                                                 <state key="normal" title="LOGIN">
                                                     <color key="titleColor" name="AppBlackColor"/>
@@ -226,10 +220,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBg-6g-13a" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="65.000000000000057" width="368" height="50"/>
+                                        <rect key="frame" x="0.0" y="65.000000000000057" width="333" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdn-WY-0L5">
-                                                <rect key="frame" x="10" y="2" width="348" height="46"/>
+                                                <rect key="frame" x="10" y="2" width="313" height="46"/>
                                                 <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="17"/>
                                                 <state key="normal" title="SIGNUP">
                                                     <color key="titleColor" name="AppBlackColor"/>
@@ -265,7 +259,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qh3-bY-XUa">
-                                <rect key="frame" x="50" y="450" width="328" height="32"/>
+                                <rect key="frame" x="50" y="450" width="293" height="32"/>
                                 <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="17"/>
                                 <state key="normal" title="DID YOU FORGET PASSWORD ?">
                                     <color key="titleColor" name="AppBlackColor"/>
@@ -275,7 +269,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Di-A9-LOT" customClass="ScrollableSegmentedControl" customModule="ScrollableSegmentedControl">
-                                <rect key="frame" x="40" y="179" width="348" height="50"/>
+                                <rect key="frame" x="40" y="179" width="313" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -301,15 +295,12 @@
                             <constraint firstItem="F5l-gC-LPF" firstAttribute="trailing" secondItem="Rb9-Vs-LLR" secondAttribute="trailing" constant="30" id="5pn-1h-p0D"/>
                             <constraint firstItem="rFP-Te-9B6" firstAttribute="top" secondItem="BgL-z1-L9p" secondAttribute="top" constant="45" id="7qw-qZ-xlJ"/>
                             <constraint firstItem="F5l-gC-LPF" firstAttribute="trailing" secondItem="Qh3-bY-XUa" secondAttribute="trailing" constant="50" id="99E-Qe-2b3"/>
-                            <constraint firstItem="Kgr-J4-TsI" firstAttribute="centerY" secondItem="rFP-Te-9B6" secondAttribute="centerY" id="FYb-qM-wWW"/>
                             <constraint firstItem="Qh3-bY-XUa" firstAttribute="leading" secondItem="F5l-gC-LPF" secondAttribute="leading" constant="50" id="Kvd-CO-Yxp"/>
-                            <constraint firstItem="Kgr-J4-TsI" firstAttribute="centerX" secondItem="BgL-z1-L9p" secondAttribute="centerX" id="LRd-Rg-3T6"/>
                             <constraint firstItem="Qh3-bY-XUa" firstAttribute="top" secondItem="Rb9-Vs-LLR" secondAttribute="bottom" constant="11" id="M7R-KV-As0"/>
                             <constraint firstItem="Rb9-Vs-LLR" firstAttribute="leading" secondItem="F5l-gC-LPF" secondAttribute="leading" constant="30" id="P5X-cj-mIq"/>
                             <constraint firstItem="2qs-VG-JTH" firstAttribute="centerX" secondItem="BgL-z1-L9p" secondAttribute="centerX" id="UQE-Z9-8tc"/>
                             <constraint firstItem="F5l-gC-LPF" firstAttribute="trailing" secondItem="4Di-A9-LOT" secondAttribute="trailing" constant="40" id="bKF-zf-TPV"/>
                             <constraint firstItem="LXp-dx-j88" firstAttribute="top" secondItem="rFP-Te-9B6" secondAttribute="bottom" constant="50" id="fQ0-UQ-eOp"/>
-                            <constraint firstItem="Kgr-J4-TsI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rFP-Te-9B6" secondAttribute="trailing" constant="60" id="ffC-1c-iah"/>
                             <constraint firstItem="rFP-Te-9B6" firstAttribute="leading" secondItem="F5l-gC-LPF" secondAttribute="leading" constant="25" id="hLP-6f-VlL"/>
                             <constraint firstItem="Rb9-Vs-LLR" firstAttribute="top" secondItem="4Di-A9-LOT" secondAttribute="bottom" constant="30" id="iPw-vV-GPV"/>
                             <constraint firstItem="2qs-VG-JTH" firstAttribute="leading" secondItem="F5l-gC-LPF" secondAttribute="leading" constant="30" id="kYn-5M-C0c"/>
@@ -339,7 +330,7 @@
             <objects>
                 <viewController storyboardIdentifier="SignupVC" modalPresentationStyle="fullScreen" id="Vf4-6V-cWC" customClass="SignupVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xjg-8A-KN4">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAB-HY-38d">
@@ -356,23 +347,17 @@
                                     <action selector="back:" destination="Vf4-6V-cWC" eventType="touchUpInside" id="k7a-8K-HYJ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NQP-Fd-8MT">
-                                <rect key="frame" x="125" y="50" width="178" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="wnS-qO-sQa"/>
-                                </constraints>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-1N-tWN">
-                                <rect key="frame" x="0.0" y="153" width="428" height="620"/>
+                                <rect key="frame" x="0.0" y="116" width="393" height="620"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuR-G0-c2M">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="576"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="576"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="c30-IA-wDf">
-                                                <rect key="frame" x="30" y="16" width="368" height="560"/>
+                                                <rect key="frame" x="30" y="16" width="333" height="560"/>
                                                 <subviews>
                                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-Nl-8Kc" customClass="StepIndicatorView" customModule="StepIndicator">
-                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="333" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="UpK-gw-Zlo"/>
@@ -419,13 +404,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="P1h-OH-98P">
-                                                        <rect key="frame" x="0.0" y="46" width="368" height="314"/>
+                                                        <rect key="frame" x="0.0" y="46" width="333" height="314"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHL-kT-X80" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="368" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C76-bU-DtU">
-                                                                        <rect key="frame" x="8" y="0.0" width="360" height="50"/>
+                                                                        <rect key="frame" x="8" y="0.0" width="325" height="50"/>
                                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                                     </textField>
@@ -454,10 +439,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jM-Sg-0ms" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="66" width="368" height="50"/>
+                                                                <rect key="frame" x="0.0" y="66" width="333" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-CP-RhV">
-                                                                        <rect key="frame" x="8" y="0.0" width="360" height="50"/>
+                                                                        <rect key="frame" x="8" y="0.0" width="325" height="50"/>
                                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                                     </textField>
@@ -486,7 +471,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rso-Aa-ykB" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="132" width="368" height="50"/>
+                                                                <rect key="frame" x="0.0" y="132" width="333" height="50"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f5-Qz-EJ1">
                                                                         <rect key="frame" x="8" y="0.0" width="288" height="50"/>
@@ -532,18 +517,18 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGW-Kr-YIt" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="198" width="368" height="50"/>
+                                                                <rect key="frame" x="0.0" y="198" width="333" height="50"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="npJ-Hr-l1g">
-                                                                        <rect key="frame" x="8" y="0.0" width="352" height="50"/>
+                                                                        <rect key="frame" x="8" y="0.0" width="317" height="50"/>
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0n7-Fl-4dv">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntm-6m-Ck9">
-                                                                                <rect key="frame" x="322" y="0.0" width="30" height="50"/>
+                                                                                <rect key="frame" x="287" y="0.0" width="30" height="50"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="50" id="5ZV-Nc-5N6"/>
                                                                                     <constraint firstAttribute="width" constant="30" id="lYQ-aa-LXh"/>
@@ -581,18 +566,18 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1h2-Hl-X1h" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="264" width="368" height="50"/>
+                                                                <rect key="frame" x="0.0" y="264" width="333" height="50"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aVo-CR-8v4">
-                                                                        <rect key="frame" x="8" y="0.0" width="352" height="50"/>
+                                                                        <rect key="frame" x="8" y="0.0" width="317" height="50"/>
                                                                         <subviews>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8K6-Mj-fWS">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                             </textField>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3g-Gj-dh8">
-                                                                                <rect key="frame" x="322" y="0.0" width="30" height="50"/>
+                                                                                <rect key="frame" x="287" y="0.0" width="30" height="50"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="30" id="9g2-GR-mDA"/>
                                                                                     <constraint firstAttribute="height" constant="50" id="FiN-1f-eDF"/>
@@ -632,7 +617,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zS1-cL-od5">
-                                                        <rect key="frame" x="0.0" y="376" width="368" height="60"/>
+                                                        <rect key="frame" x="0.0" y="376" width="333" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="HpA-D2-Xw6"/>
                                                         </constraints>
@@ -645,13 +630,13 @@
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kNq-Wh-a7m">
-                                                        <rect key="frame" x="0.0" y="452" width="368" height="108"/>
+                                                        <rect key="frame" x="0.0" y="452" width="333" height="108"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOi-vk-Fin" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="368" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-Vb-ai4">
-                                                                        <rect key="frame" x="10" y="2" width="348" height="46"/>
+                                                                        <rect key="frame" x="10" y="2" width="313" height="46"/>
                                                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="17"/>
                                                                         <state key="normal" title="SIGNUP">
                                                                             <color key="titleColor" name="AppBlackColor"/>
@@ -679,10 +664,10 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtq-lg-2Ph" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="58" width="368" height="50"/>
+                                                                <rect key="frame" x="0.0" y="58" width="333" height="50"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gS-Uk-ByI">
-                                                                        <rect key="frame" x="10" y="2" width="348" height="46"/>
+                                                                        <rect key="frame" x="10" y="2" width="313" height="46"/>
                                                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="17"/>
                                                                         <state key="normal" title="LOGIN">
                                                                             <color key="titleColor" name="AppBlackColor"/>
@@ -744,12 +729,9 @@
                         <color key="backgroundColor" red="0.9546068311" green="0.9546068311" blue="0.9546068311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cc6-1N-tWN" firstAttribute="leading" secondItem="hxE-Cl-jyR" secondAttribute="leading" id="23Q-eb-Z6W"/>
-                            <constraint firstItem="NQP-Fd-8MT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lAB-HY-38d" secondAttribute="trailing" constant="60" id="3gG-7n-rlG"/>
                             <constraint firstItem="lAB-HY-38d" firstAttribute="top" secondItem="xjg-8A-KN4" secondAttribute="top" constant="45" id="Dgs-ri-pAF"/>
                             <constraint firstItem="cc6-1N-tWN" firstAttribute="centerX" secondItem="xjg-8A-KN4" secondAttribute="centerX" id="MNT-ps-3b2"/>
                             <constraint firstItem="cc6-1N-tWN" firstAttribute="centerY" secondItem="xjg-8A-KN4" secondAttribute="centerY" id="U4w-LC-EiY"/>
-                            <constraint firstItem="NQP-Fd-8MT" firstAttribute="centerX" secondItem="hxE-Cl-jyR" secondAttribute="centerX" id="e5J-Rn-0vG"/>
-                            <constraint firstItem="NQP-Fd-8MT" firstAttribute="centerY" secondItem="lAB-HY-38d" secondAttribute="centerY" id="gsz-cd-Ea2"/>
                             <constraint firstItem="lAB-HY-38d" firstAttribute="leading" secondItem="hxE-Cl-jyR" secondAttribute="leading" constant="25" id="pyd-rw-3Ha"/>
                         </constraints>
                     </view>
@@ -773,14 +755,14 @@
             <objects>
                 <viewController storyboardIdentifier="ForgotPasswordVC" id="u5o-S5-HHz" customClass="ForgotPasswordVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2t8-3F-gQs">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="916"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2j-IU-S38">
-                                <rect key="frame" x="0.0" y="200" width="428" height="716"/>
+                                <rect key="frame" x="0.0" y="200" width="393" height="642"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlv-FW-3fJ">
-                                        <rect key="frame" x="181" y="8" width="66" height="4"/>
+                                        <rect key="frame" x="163.66666666666666" y="8" width="66" height="4"/>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="66" id="9eE-lU-7jW"/>
@@ -798,7 +780,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fag-lI-d9S" customClass="ScrollableSegmentedControl" customModule="ScrollableSegmentedControl">
-                                        <rect key="frame" x="40" y="42" width="348" height="50"/>
+                                        <rect key="frame" x="40" y="42" width="313" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -816,10 +798,10 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWS-zm-7W1" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="262" width="368" height="50"/>
+                                        <rect key="frame" x="30" y="262" width="333" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xow-MJ-zzV">
-                                                <rect key="frame" x="10" y="2" width="348" height="46"/>
+                                                <rect key="frame" x="10" y="2" width="313" height="46"/>
                                                 <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="17"/>
                                                 <state key="normal" title="CONFIRM">
                                                     <color key="titleColor" name="AppBlackColor"/>
@@ -847,13 +829,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jpg-2R-iVB">
-                                        <rect key="frame" x="22" y="113" width="368" height="120"/>
+                                        <rect key="frame" x="22" y="113" width="333" height="120"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcr-74-oUt" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="368" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1dI-Y1-PLo" customClass="JVFloatLabeledTextField">
-                                                        <rect key="frame" x="8" y="0.0" width="352" height="50"/>
+                                                        <rect key="frame" x="8" y="0.0" width="317" height="50"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -878,10 +860,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaJ-CH-u0Y" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="70" width="368" height="50"/>
+                                                <rect key="frame" x="0.0" y="70" width="333" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Your Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BOE-V9-dim" customClass="JVFloatLabeledTextField">
-                                                        <rect key="frame" x="8" y="0.0" width="290" height="50"/>
+                                                        <rect key="frame" x="8" y="0.0" width="255" height="50"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -982,11 +964,11 @@
             <objects>
                 <viewController storyboardIdentifier="PaymentVC" id="Afs-nd-tzN" customClass="PaymentVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xo3-0I-9Ga">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHL-s3-pKc" customClass="StepIndicatorView" customModule="StepIndicator">
-                                <rect key="frame" x="20" y="93" width="388" height="30"/>
+                                <rect key="frame" x="20" y="93" width="353" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bQy-jG-aLS"/>
@@ -1043,12 +1025,6 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4Lr-KY-ceW">
-                                <rect key="frame" x="125" y="50" width="178" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="X7L-2t-5nK"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Ym-ft-3Gr">
                                 <rect key="frame" x="29.999999999999986" y="139" width="217.66666666666663" height="71.333333333333314"/>
                                 <subviews>
@@ -1073,28 +1049,28 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MHo-XR-gNc">
-                                <rect key="frame" x="30" y="240.33333333333334" width="368" height="271.33333333333326"/>
+                                <rect key="frame" x="30" y="240.33333333333334" width="333" height="271.33333333333326"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="A7S-86-etS">
-                                        <rect key="frame" x="46.666666666666686" y="0.0" width="275" height="160"/>
+                                        <rect key="frame" x="29" y="0.0" width="275" height="160"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="YBE-Ij-Vjz"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Successful Registeration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZB-a0-KOF">
-                                        <rect key="frame" x="45.666666666666686" y="175.99999999999997" width="277" height="29.333333333333343"/>
+                                        <rect key="frame" x="28" y="175.99999999999997" width="277" height="29.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="25"/>
                                         <color key="textColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account will be activated soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4A-R2-7n9">
-                                        <rect key="frame" x="33.333333333333343" y="213.33333333333334" width="301.33333333333326" height="0.0"/>
+                                        <rect key="frame" x="16" y="213.33333333333334" width="301.33333333333331" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="19"/>
                                         <color key="textColor" name="AppBlackColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aD-2u-grw" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="59" y="221.33333333333334" width="250" height="50.000000000000028"/>
+                                        <rect key="frame" x="41.666666666666686" y="221.33333333333334" width="250" height="50.000000000000028"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWb-fd-89N">
                                                 <rect key="frame" x="10" y="2" width="230" height="46"/>
@@ -1134,15 +1110,12 @@
                             <constraint firstItem="PhE-M3-dSM" firstAttribute="trailing" secondItem="MHo-XR-gNc" secondAttribute="trailing" constant="30" id="7j2-rX-SJx"/>
                             <constraint firstItem="pvh-xL-1Dv" firstAttribute="top" secondItem="Xo3-0I-9Ga" secondAttribute="top" constant="45" id="CtO-hF-Alm"/>
                             <constraint firstItem="pvh-xL-1Dv" firstAttribute="leading" secondItem="PhE-M3-dSM" secondAttribute="leading" constant="25" id="D0M-9L-rLy"/>
-                            <constraint firstItem="4Lr-KY-ceW" firstAttribute="centerX" secondItem="Xo3-0I-9Ga" secondAttribute="centerX" id="J5P-3j-ZxK"/>
-                            <constraint firstItem="4Lr-KY-ceW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pvh-xL-1Dv" secondAttribute="trailing" constant="60" id="KNQ-AE-ze7"/>
                             <constraint firstItem="6Ym-ft-3Gr" firstAttribute="top" secondItem="AHL-s3-pKc" secondAttribute="bottom" constant="16" id="Og7-ea-lyt"/>
                             <constraint firstItem="AHL-s3-pKc" firstAttribute="top" secondItem="pvh-xL-1Dv" secondAttribute="bottom" constant="8" id="SkY-00-9qU"/>
                             <constraint firstItem="MHo-XR-gNc" firstAttribute="leading" secondItem="PhE-M3-dSM" secondAttribute="leading" constant="30" id="aJf-Cd-HRS"/>
                             <constraint firstItem="MHo-XR-gNc" firstAttribute="centerX" secondItem="Xo3-0I-9Ga" secondAttribute="centerX" id="f0a-tW-ceL"/>
                             <constraint firstItem="AHL-s3-pKc" firstAttribute="leading" secondItem="Xo3-0I-9Ga" secondAttribute="leading" constant="20" id="fay-X9-rv3"/>
                             <constraint firstItem="PhE-M3-dSM" firstAttribute="trailing" secondItem="AHL-s3-pKc" secondAttribute="trailing" constant="20" id="i09-FO-8QP"/>
-                            <constraint firstItem="4Lr-KY-ceW" firstAttribute="centerY" secondItem="pvh-xL-1Dv" secondAttribute="centerY" id="ijq-Nr-sZl"/>
                             <constraint firstItem="MHo-XR-gNc" firstAttribute="top" secondItem="6Ym-ft-3Gr" secondAttribute="bottom" constant="30" id="q0P-Xl-ah2"/>
                             <constraint firstItem="6Ym-ft-3Gr" firstAttribute="leading" secondItem="PhE-M3-dSM" secondAttribute="leading" constant="30" id="yl8-RD-dc8"/>
                         </constraints>
@@ -1160,26 +1133,26 @@
             <objects>
                 <viewController storyboardIdentifier="NewPasswordVC" id="5z1-Z2-Df9" customClass="NewPasswordVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szK-sd-LcJ">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUk-ly-XLI">
-                                <rect key="frame" x="20" y="331.33333333333326" width="388" height="263.66666666666674"/>
+                                <rect key="frame" x="20" y="294.33333333333326" width="353" height="263.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Hfo-Ms-9Qo">
-                                        <rect key="frame" x="20" y="19.999999999999986" width="348" height="223.66666666666663"/>
+                                        <rect key="frame" x="20" y="19.999999999999986" width="313" height="223.66666666666663"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-NC-MRI">
-                                                <rect key="frame" x="0.0" y="0.0" width="348" height="25.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="25.666666666666668"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2n-kR-I74">
-                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="25.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="278" height="25.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3L-Ti-gDD">
-                                                        <rect key="frame" x="313" y="0.0" width="35" height="25.666666666666668"/>
+                                                        <rect key="frame" x="278" y="0.0" width="35" height="25.666666666666668"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="35" id="c2G-xl-zdY"/>
                                                         </constraints>
@@ -1194,13 +1167,13 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7x-bf-xMq" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="41.666666666666686" width="348" height="50"/>
+                                                <rect key="frame" x="0.0" y="41.666666666666686" width="313" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="t9M-Ee-PlX">
-                                                        <rect key="frame" x="8" y="0.0" width="332" height="50"/>
+                                                        <rect key="frame" x="8" y="0.0" width="297" height="50"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nv9-w5-xZE" customClass="JVFloatLabeledTextField">
-                                                                <rect key="frame" x="0.0" y="0.0" width="302" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="267" height="50"/>
                                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1210,7 +1183,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vci-4x-75q">
-                                                                <rect key="frame" x="302" y="0.0" width="30" height="50"/>
+                                                                <rect key="frame" x="267" y="0.0" width="30" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="30" id="Bce-Fq-JH6"/>
                                                                     <constraint firstAttribute="height" constant="50" id="ulo-Iz-gmS"/>
@@ -1248,13 +1221,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QA-nL-0sm" customClass="CardView" customModule="Dietness" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="107.66666666666669" width="348" height="50"/>
+                                                <rect key="frame" x="0.0" y="107.66666666666669" width="313" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cWY-DP-O7P">
-                                                        <rect key="frame" x="8" y="0.0" width="332" height="50"/>
+                                                        <rect key="frame" x="8" y="0.0" width="297" height="50"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvG-fy-FZr" customClass="JVFloatLabeledTextField">
-                                                                <rect key="frame" x="0.0" y="0.0" width="302" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="267" height="50"/>
                                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -1264,7 +1237,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAp-Fy-OWp">
-                                                                <rect key="frame" x="302" y="0.0" width="30" height="50"/>
+                                                                <rect key="frame" x="267" y="0.0" width="30" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="HZF-ay-Q01"/>
                                                                     <constraint firstAttribute="width" constant="30" id="Oxe-nq-ceO"/>
@@ -1302,10 +1275,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kI3-fk-8L2" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="173.66666666666669" width="348" height="50"/>
+                                                <rect key="frame" x="0.0" y="173.66666666666669" width="313" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7M8-dh-pCH">
-                                                        <rect key="frame" x="10" y="2" width="328" height="46"/>
+                                                        <rect key="frame" x="10" y="2" width="293" height="46"/>
                                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="19"/>
                                                         <state key="normal" title="CONFIRM">
                                                             <color key="titleColor" name="AppBlackColor"/>
@@ -1390,26 +1363,26 @@
             <objects>
                 <viewController storyboardIdentifier="PrivacyPolicyVC" modalPresentationStyle="overFullScreen" id="7dm-aP-2ZD" customClass="PrivacyPolicyVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OgL-ef-Z4k">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFc-14-8As">
-                                <rect key="frame" x="20" y="150" width="388" height="626"/>
+                                <rect key="frame" x="20" y="150" width="353" height="552"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a1p-Ak-Dma">
-                                        <rect key="frame" x="20" y="20" width="348" height="586"/>
+                                        <rect key="frame" x="20" y="20" width="313" height="512"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdN-FN-dTU">
-                                                <rect key="frame" x="0.0" y="0.0" width="348" height="25.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbk-gG-k8O">
-                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="25.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="278" height="21"/>
                                                         <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEj-bc-3qO">
-                                                        <rect key="frame" x="313" y="0.0" width="35" height="25.666666666666668"/>
+                                                        <rect key="frame" x="278" y="0.0" width="35" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="35" id="imB-7E-ZFs"/>
                                                         </constraints>
@@ -1424,7 +1397,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ck7-4G-pUS">
-                                                <rect key="frame" x="0.0" y="33.666666666666686" width="348" height="552.33333333333326"/>
+                                                <rect key="frame" x="0.0" y="29" width="313" height="483"/>
                                                 <color key="backgroundColor" name="AppWhiteColor"/>
                                                 <string key="text">It is very important to us that we provide you with the highest level of service. In order to help us do this, from time to time we may send you details of products, services, discounts, promotions and campaigns, which we think, may be of interest to you. We may send you marketing communications with your consent. If at any time you do not wish to receive these details and wish to unsubscribe from marketing communications, contact us via e-mail or log onto your account to change your relevant settings from my account link on the user main page.
 </string>
@@ -1488,19 +1461,19 @@
             <objects>
                 <viewController storyboardIdentifier="ChooseCountryCodeVC" id="zZH-JA-EeU" customClass="ChooseCountryCodeVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cX1-dz-ZZn">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="60" estimatedRowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JNa-sG-qVn">
-                                <rect key="frame" x="0.0" y="47" width="428" height="879"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CountryCodeCell" id="X46-Bc-812" customClass="CountryCodeCell" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="428" height="60"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X46-Bc-812" id="9QZ-Xk-g5k">
-                                            <rect key="frame" x="0.0" y="0.0" width="428" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVo-n6-N0r">
@@ -1510,7 +1483,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQ1-hy-2BB">
-                                                    <rect key="frame" x="342" y="15" width="40" height="30"/>
+                                                    <rect key="frame" x="307" y="15" width="40" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="01k-us-BFF"/>
                                                         <constraint firstAttribute="height" constant="30" id="0hg-7j-1W7"/>
@@ -1559,11 +1532,11 @@
             <objects>
                 <viewController storyboardIdentifier="OtpVC" id="eYJ-jY-j4B" customClass="OtpVC" customModule="Dietness" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Is6-yx-4NA">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xN-h3-TWo" customClass="StepIndicatorView" customModule="StepIndicator">
-                                <rect key="frame" x="20" y="93" width="388" height="30"/>
+                                <rect key="frame" x="20" y="93" width="353" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Btb-Gq-BFI"/>
@@ -1623,12 +1596,6 @@
                                     <action selector="backBtnAction:" destination="eYJ-jY-j4B" eventType="touchUpInside" id="OKl-7a-MYs"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cb0-5M-Kmp">
-                                <rect key="frame" x="125" y="50" width="178" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3Ui-cm-pa2"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-Tl-xtK">
                                 <rect key="frame" x="30" y="139" width="368.66666666666669" height="71.333333333333314"/>
                                 <subviews>
@@ -1653,7 +1620,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="vao-61-Bth" customClass="OTPFieldView" customModule="OTPFieldView">
-                                <rect key="frame" x="64" y="218.33333333333337" width="300" height="80"/>
+                                <rect key="frame" x="46.666666666666657" y="218.33333333333337" width="300" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Nda-qA-xae"/>
@@ -1673,25 +1640,25 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XPR-Cl-BPH">
-                                <rect key="frame" x="30" y="318.33333333333331" width="368" height="227.66666666666669"/>
+                                <rect key="frame" x="30" y="318.33333333333331" width="333" height="227.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="duZ-Zr-Kku">
-                                        <rect key="frame" x="0.0" y="0.0" width="368" height="227.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="227.66666666666666"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="MzZ-lf-Two">
-                                                <rect key="frame" x="46.666666666666686" y="0.0" width="275" height="160"/>
+                                                <rect key="frame" x="29" y="0.0" width="275" height="160"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="hML-at-Bbn"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Successful Registeration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufu-SI-zIv">
-                                                <rect key="frame" x="45.666666666666686" y="168" width="277" height="29.333333333333343"/>
+                                                <rect key="frame" x="28" y="168" width="277" height="29.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="25"/>
                                                 <color key="textColor" red="0.0039215686269999999" green="0.67843137249999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your account will be activated soon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5E-K2-U55">
-                                                <rect key="frame" x="33.333333333333343" y="205.33333333333331" width="301.33333333333326" height="22.333333333333343"/>
+                                                <rect key="frame" x="16" y="205.33333333333331" width="301.33333333333331" height="22.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="19"/>
                                                 <color key="textColor" name="AppBlackColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1699,10 +1666,10 @@
                                         </subviews>
                                     </stackView>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMk-3d-tdB" customClass="BorderdView" customModule="Dietness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="368" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEY-zp-j1V">
-                                                <rect key="frame" x="10" y="2" width="348" height="46"/>
+                                                <rect key="frame" x="10" y="2" width="313" height="46"/>
                                                 <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="19"/>
                                                 <state key="normal" title="CONFIRM">
                                                     <color key="titleColor" name="AppBlackColor"/>
@@ -1732,10 +1699,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k9J-Ez-Tiy">
-                                <rect key="frame" x="30" y="562" width="368" height="60"/>
+                                <rect key="frame" x="30" y="562" width="333" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ViY-cV-dub">
-                                        <rect key="frame" x="27.333333333333343" y="0.0" width="313.33333333333326" height="26.333333333333332"/>
+                                        <rect key="frame" x="10" y="0.0" width="313.33333333333331" height="26.333333333333332"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't recieve a code ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pob-5z-35h">
                                                 <rect key="frame" x="0.0" y="0.0" width="154.66666666666666" height="26.333333333333332"/>
@@ -1756,7 +1723,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-sn-fyd">
-                                        <rect key="frame" x="156.33333333333334" y="34.333333333333371" width="55.333333333333343" height="25.666666666666671"/>
+                                        <rect key="frame" x="139" y="34.333333333333371" width="55.333333333333343" height="25.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo SemiBold" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1770,11 +1737,8 @@
                         <viewLayoutGuide key="safeArea" id="CGL-rX-QLe"/>
                         <color key="backgroundColor" name="AppWhiteColor"/>
                         <constraints>
-                            <constraint firstItem="cb0-5M-Kmp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nPq-qd-3jk" secondAttribute="trailing" constant="60" id="38P-Tt-MUs"/>
                             <constraint firstItem="vao-61-Bth" firstAttribute="top" secondItem="ck8-Tl-xtK" secondAttribute="bottom" constant="8" id="7Ir-gf-kjl"/>
                             <constraint firstItem="ck8-Tl-xtK" firstAttribute="leading" secondItem="CGL-rX-QLe" secondAttribute="leading" constant="30" id="9Nc-bV-G9L"/>
-                            <constraint firstItem="cb0-5M-Kmp" firstAttribute="centerY" secondItem="nPq-qd-3jk" secondAttribute="centerY" id="BQD-fU-8FN"/>
-                            <constraint firstItem="cb0-5M-Kmp" firstAttribute="centerX" secondItem="Is6-yx-4NA" secondAttribute="centerX" id="D1I-8F-8oZ"/>
                             <constraint firstItem="CGL-rX-QLe" firstAttribute="trailing" secondItem="1xN-h3-TWo" secondAttribute="trailing" constant="20" id="Ifk-VP-Rr4"/>
                             <constraint firstItem="1xN-h3-TWo" firstAttribute="top" secondItem="nPq-qd-3jk" secondAttribute="bottom" constant="8" id="JFm-Ue-mIU"/>
                             <constraint firstItem="k9J-Ez-Tiy" firstAttribute="top" secondItem="XPR-Cl-BPH" secondAttribute="bottom" constant="16" id="KvB-mv-2fE"/>
@@ -1840,7 +1804,6 @@
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="120"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="eye.fill" catalog="system" width="128" height="80"/>
-        <image name="logo" width="1024" height="1024"/>
         <image name="success" width="275" height="228"/>
         <image name="xmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AppBlackColor">
