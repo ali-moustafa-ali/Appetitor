@@ -22,7 +22,7 @@ class PackagePopUpVC: UIViewController {
     var name = ""
     var names : [String] = []
     var selectedPlan:Plan?
-    var didTapSubscribe:(()->())?
+    var didTapSubscribe:((Int)->())?
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,12 +55,14 @@ class PackagePopUpVC: UIViewController {
     
     
     @IBAction func subscribeBtnAction(_ sender: Any) {
-        if selectedPlan != nil {
-            let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+        
+        
+        if let selectedPlanId = selectedPlan?.id {
+//            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
             
             self.dismiss(animated: false) {
-                self.didTapSubscribe?()
+                self.didTapSubscribe?(selectedPlanId)
             }
         }else {
             self.view.makeToast("Please Choose plan")

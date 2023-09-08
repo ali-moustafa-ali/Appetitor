@@ -181,10 +181,15 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
             vc.package = self?.packages[indexPath.row]
             vc.imageURL = imgURL
             
-            vc.didTapSubscribe = {[weak self] in
+            vc.didTapSubscribe = {[weak self]  planId in
                 
                 let storyboard = UIStoryboard(name: "Login", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+                
+                
+                vc.planId = planId
+                
+                
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
             

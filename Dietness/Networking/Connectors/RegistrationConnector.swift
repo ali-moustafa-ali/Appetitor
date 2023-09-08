@@ -12,7 +12,7 @@ enum RegisterationConnector:Connector,AuthorizedConnector{
     
     
     case login(loginData:String,password:String,code:String?,type:String)
-    case signup(name:String,mobile:String,email:String,password:String,code:String)
+    case signup(name:String,mobile:String,email:String,password:String,code:String, planId: Int)
     case forgotPassword(emailOrMobile:String,type:String,code:String?)
     case verifyOtpForget(otp:String,emailOrMobile:String,type:String,code:String)
     case verifyOtp(otp:String,emailOrMobile:String,type:String,code:String)
@@ -80,8 +80,15 @@ enum RegisterationConnector:Connector,AuthorizedConnector{
         switch self {
         case .login(let data , let password,let code,let type):
             return Parameter.jsonObject(value: ["emailOrmobile":data,"password":password,"code":code,"type":type])
-        case .signup(let name, let mobile, let email, let password, let code):
-            return Parameter.jsonObject(value: ["name":name,"mobile":mobile,"email":email,"password":password,"verify_password":password,"code":code])
+            
+        case .signup(let name, let mobile, let email, let password, let code, let planId):
+            
+            let params = Parameter.jsonObject(value: ["name":name,"mobile":mobile,"email":email,"password":password,"verify_password":password,"code":code, "plan_id": String(planId)])
+            
+            print(params)
+            
+            return params
+            
         case .forgotPassword(let emailOrMobile, let type, let code):
             return Parameter.jsonObject(value: ["emailOrmobile":emailOrMobile,"type":type,"code":code])
         case .verifyOtp(let otp, let emailOrMobile, let type, let code):

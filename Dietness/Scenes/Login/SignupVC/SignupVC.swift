@@ -10,6 +10,7 @@ import UIKit
 import StepIndicator
 
 class SignupVC: UIViewController {
+    
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -21,29 +22,47 @@ class SignupVC: UIViewController {
     var note = ""
     var autoActive = false
     var showDeliverySwitch = false
-
+    var planId: Int?
     
     @IBOutlet weak var stepIndicator: StepIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getRules()
-        // Do any additional setup after loading the view.
     }
+    
     func signup(){
         self.view.makeToastActivity(.center)
-        Connect.default.request(RegisterationConnector.signup(name: fullNameTextField.text ?? "", mobile: phoneTextField.text ?? "", email: emailTextField.text ?? "", password: passwordTextField.text ?? "" , code: code)).decoded(toType: SignUpResponse.self).observe { (result) in
+        
+        guard let planId = planId else {
+            
+            self.view.makeToast("please provide plan id")
+            
+            return
+        }
+        
+        Connect.default.request(RegisterationConnector.signup(name: fullNameTextField.text ?? "",
+                                                              mobile: phoneTextField.text ?? "",
+                                                              email: emailTextField.text ?? "",
+                                                              password: passwordTextField.text ?? "" ,
+                                                              code: code,
+                                                              planId: planId)).decoded(toType: SignUpResponse.self).observe { (result) in
+            
             self.view.hideToastActivity()
             switch result{
             case .success(let data):
                 if let result = data.result{
+                    
                     let setting = SettingsManager()
                     setting.updateUser(user: result.user)
                     setting.setUserToken(value: result.token ?? "")
                     print("user token : \(SettingsManager.init().getUserToken())")
+                    
                     let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
                     vc.new = true
                     vc.showDeliverySwitch = self.showDeliverySwitch
                     vc.note = self.note
+                    
                     vc.didAddAddress = { [weak self] in
                         let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
                         otpVC.comingFrom = "signup"
@@ -52,8 +71,10 @@ class SignupVC: UIViewController {
                         otpVC.autoActive = self?.autoActive
                         self?.navigationController?.pushViewController(otpVC, animated: true)
                     }
+                    
                     self.present(vc, animated: true, completion: nil)
                 }else{
+                    
                     self.view.makeToast(data.message)
                 }
             case .failure(let error):
@@ -82,7 +103,7 @@ class SignupVC: UIViewController {
         }
     }
     
-    
+    // MARK: Actions
     @IBAction func signup(_ sender: Any) {
         signup()
         
