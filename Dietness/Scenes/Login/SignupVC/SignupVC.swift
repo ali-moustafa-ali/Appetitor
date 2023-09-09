@@ -225,17 +225,17 @@ class SignupVC: UIViewController {
         }
         
         guard let password = passwordTextField.text,
-                !password.isEmpty else{
+              password.count >= 6 else{
             
-            view.makeToast("Please choose password")
+            view.makeToast("Password should be 6 characters or more")
             
             return false
         }
         
         guard let verifyPassword = confirmPasswordTextField.text,
-                !verifyPassword.isEmpty else{
+              verifyPassword.count >= 6 else{
             
-            view.makeToast("Please choose confirm password")
+            view.makeToast("Confirm Password should be 6 characters or more")
             
             return false
         }
