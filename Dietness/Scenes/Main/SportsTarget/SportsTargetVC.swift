@@ -15,7 +15,6 @@ class SportsTargetVC: UIViewController {
     @IBOutlet weak var titleLbl: UILabel!
     
     
-    var signUpInformation: FullSignUpInformation?
     
     var choseSportsTargetCompletion: ((SportsTargetVC, Int)->())?
     
@@ -26,27 +25,9 @@ class SportsTargetVC: UIViewController {
 
         titleLbl.text = "What is your sporting goal?".localized
         
+
         
-        // prepare
-        let signUpInfo = SignUpInfo(name: "Moaaz sobhy briek", mobile: "1211767397",
-                                    email: "ahmed231231@yahoo.com", password: "12345678",
-                                    countryCode: "20")
-        
-        let userInformation = UserInformation(weight: "120", height: "212",
-                                              birth_date: "12-12-2022", gender: "1", food_system: "1",
-                                              allergen_id: ["4","5"], excluded_classifications: ["1","2"])
-        
-        
-        signUpInformation = FullSignUpInformation()
-        signUpInformation?.planId = 159
-        signUpInformation?.sportsTargetId = 1
-        signUpInformation?.signUpInfo = signUpInfo
-        signUpInformation?.userInformation = userInformation
-        
-        
-        signup()
-        
-//        getSportsTargets()
+        getSportsTargets()
         
     }
     
@@ -76,59 +57,7 @@ class SportsTargetVC: UIViewController {
     }
 
     
-    func signup(){
-        self.view.makeToastActivity(.center)
-        
-        guard let signUpInformationPara = signUpInformation?.getParams() else {
     
-            self.view.makeToast("some data are missing")
-    
-            return
-        }
-    
-        Connect.default.request(RegisterationConnector
-            .signup(dict: signUpInformationPara))
-        .decoded(toType: SignUpResponse.self)
-        .observe {
-            [weak self] (result) in
-            guard let self = self else{return}
-            
-            self.view.hideToastActivity()
-            
-            switch result{
-            case .success(let data):
-                if let result = data.result{
-                    
-                    let setting = SettingsManager()
-                    setting.updateUser(user: result.user)
-                    setting.setUserToken(value: result.token ?? "")
-                    print("user token : \(SettingsManager.init().getUserToken())")
-                    
-                    //                    let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
-                    //                    vc.new = true
-                    ////                    vc.showDeliverySwitch = self.showDeliverySwitch
-                    ////                    vc.note = self.note
-                    //
-                    //                    vc.didAddAddress = { [weak self] in
-                    //                        let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
-                    //                        otpVC.comingFrom = "signup"
-                    //                        otpVC.type = "email"
-                    //                        otpVC.email = self?.emailTextField.text ?? ""
-                    //                        otpVC.autoActive = self?.autoActive
-                    //                        self?.navigationController?.pushViewController(otpVC, animated: true)
-                    //                    }
-                    //
-                    //                    self.present(vc, animated: true, completion: nil)
-                }else{
-                    
-                    self.view.makeToast(data.message)
-                }
-            case .failure(let error):
-                self.view.makeToast(error.localizedDescription)
-            }
-        }
-    }
-
     
 }
 
@@ -186,8 +115,6 @@ class SportsTargetCell: UITableViewCell {
 
 // MARK: Para models
 class FullSignUpInformation{
-    // 0
-    var planId: Int?
 
     // 1
     var signUpInfo: SignUpInfo?
@@ -204,8 +131,6 @@ class FullSignUpInformation{
         // 1
         var signUpInfoParams = signUpInfo?.getParams()
         
-        // 2
-        signUpInfoParams?["planId"] = String(planId ?? -1)
         
         signUpInfoParams?["sport_target_id"] = String(sportsTargetId ?? -1)
 
@@ -227,53 +152,6 @@ class FullSignUpInformation{
     }
 }
 
-class SignUpInfo{
-    var name: String?
-    var mobile: String?
-    var email: String?
-    var password: String?
-    var countryCode: String?
-    
-    init(name: String?,
-         mobile: String?,
-         email: String?,
-         password: String?,
-         countryCode: String?
-        ){
-        self.name = name
-        self.mobile = mobile
-
-        self.email = email
-        self.password = password
-        self.countryCode = countryCode
-
-    }
-    
-    func getParams()-> [String: Any]{
-                
-        var para = [String: String]()
-        
-        //
-        if let name = name{ para["name"] = name }
-        
-        if let mobile = mobile{ para["mobile"] = mobile }
-
-        if let email = email{ para["email"] = email }
-
-        if let password = password{
-            para["password"] = password
-            para["verify_password"] = password
-        }
-
-        if let countryCode = countryCode{ para["code"] = countryCode }
-
-        if let name = name{ para["name"] = name }
-
-
-        
-        return para
-    }
-}
 
 class UserInformation{
     

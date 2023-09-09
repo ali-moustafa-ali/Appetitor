@@ -26,42 +26,87 @@ class SignupVC: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var countryCodeButton: UIButton!
 
-    var code = "966"
+    var countryCode = "966"
     var note = ""
     var autoActive = false
     var showDeliverySwitch = false
     
-    
+    var signUpInformation: FullSignUpInformation?
+
     var planId: Int?
-    var sportingGoalId: Int?
-    
     
     @IBOutlet weak var stepIndicator: StepIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getRules()
-    }
-    
-    
-//    func shortcutToCompleteDesign(){
-//        let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
-//        vc.new = true
-//        vc.showDeliverySwitch = self.showDeliverySwitch
-//        vc.note = self.note
-//
-//        vc.didAddAddress = { [weak self] in
-//            let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
-//            otpVC.comingFrom = "signup"
-//            otpVC.type = "email"
-//            otpVC.email = self?.emailTextField.text ?? ""
-//            otpVC.autoActive = self?.autoActive
-//            self?.navigationController?.pushViewController(otpVC, animated: true)
-//        }
-//
-//        self.present(vc, animated: true, completion: nil)
-//    }
+        
+        // prepare
+        
+        signUpInformation = FullSignUpInformation()
 
+        let userInformation = UserInformation(weight: "120", height: "212",
+                                              birth_date: "12-12-2022", gender: "1", food_system: "1",
+                                              allergen_id: ["4","5"], excluded_classifications: ["1","2"])
+//
+        signUpInformation?.userInformation = userInformation
+        
+    }
+
+    // MARK: Sign up
+    func signup(){
+        self.view.makeToastActivity(.center)
+        
+        guard let signUpInformationPara = signUpInformation?.getParams() else {
+    
+            self.view.makeToast("some data are missing")
+    
+            return
+        }
+    
+        Connect.default.request(RegisterationConnector
+            .signup(dict: signUpInformationPara))
+        .decoded(toType: SignUpResponse.self)
+        .observe {
+            [weak self] (result) in
+            guard let self = self else{return}
+            
+            self.view.hideToastActivity()
+            
+            switch result{
+            case .success(let data):
+                if let result = data.result{
+                    
+                    let setting = SettingsManager()
+                    setting.updateUser(user: result.user)
+                    setting.setUserToken(value: result.token ?? "")
+                    print("user token : \(SettingsManager.init().getUserToken())")
+                    
+                    let vc:AddressVC = AddressVC.instantiate(appStoryboard: .popUps)
+                    vc.new = true
+                    vc.showDeliverySwitch = self.showDeliverySwitch
+                    vc.note = self.note
+                    
+                    vc.didAddAddress = { [weak self] in
+                        let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
+                        otpVC.comingFrom = "signup"
+                        otpVC.type = "email"
+                        otpVC.email = self?.emailTextField.text ?? ""
+                        otpVC.autoActive = self?.autoActive
+                        self?.navigationController?.pushViewController(otpVC, animated: true)
+                    }
+                    
+                    self.present(vc, animated: true, completion: nil)
+                }else{
+                    
+                    self.view.makeToast(data.message)
+                }
+            case .failure(let error):
+                self.view.makeToast(error.localizedDescription)
+            }
+        }
+    }
     
     func getRules(){
         self.view.makeToastActivity(.center)
@@ -92,7 +137,11 @@ class SignupVC: UIViewController {
             
             vc.dismiss(animated: true)
             
-            self?.sportingGoalId = targetId
+            self?.signUpInformation?.sportsTargetId = targetId
+            
+            self?.stepIndicator.currentStep = 3
+            
+            self?.signup()
             
             print(targetId, "tar idddd")
         }
@@ -100,10 +149,35 @@ class SignupVC: UIViewController {
         self.present(sportsTargetVc, animated: true, completion: nil)
     }
     
+    private func getSignUpInfo()->SignUpInfo?{
+        
+        if let fullName = fullNameTextField.text,
+           let email = emailTextField.text,
+           let phone = phoneTextField.text,
+           let password = passwordTextField.text {
+            
+            return SignUpInfo(planId: planId,
+                              name: fullName, mobile: phone,
+                              email: email, password: password,
+                              countryCode: countryCode)
+        }
+        
+        return nil
+    }
     
     // MARK: Actions
     @IBAction func signup(_ sender: Any) {
-//        signup()
+        
+        guard let signUpInfo = getSignUpInfo() else{
+            
+            view.makeToast("Please complete all required data")
+            
+            return
+        }
+        
+        signUpInformation?.signUpInfo = signUpInfo
+                
+        stepIndicator.currentStep = 2
         
         showSportsTargetScreen()
         
@@ -128,11 +202,13 @@ class SignupVC: UIViewController {
     }
     
     @IBAction func changeCountryCode(_ sender: Any) {
-        let vc:ChooseCountryCodeVC = ChooseCountryCodeVC.instantiate(appStoryboard: .login)
-        vc.didSelectCountry = {[weak self] (country)in
+        let vc = ChooseCountryCodeVC.instantiate(appStoryboard: .login) as! ChooseCountryCodeVC
+        
+        vc.didSelectCountry = { [weak self] (country)in
             self?.countryCodeButton.setTitle( country.dialCode, for: .normal)
-            self?.code = country.dialCode.replacingOccurrences(of: "+", with: "")
+            self?.countryCode = country.dialCode.replacingOccurrences(of: "+", with: "")
         }
+        
         self.present(vc, animated: true, completion: nil)
     }
 }
@@ -140,3 +216,57 @@ class SignupVC: UIViewController {
 
 
 
+class SignUpInfo{
+    // 0
+    var planId: Int?
+    
+    var name: String?
+    var mobile: String?
+    var email: String?
+    var password: String?
+    var countryCode: String?
+    
+    init(planId: Int?,
+         name: String?,
+         mobile: String?,
+         email: String?,
+         password: String?,
+         countryCode: String?
+        ){
+        self.planId = planId
+        self.name = name
+        self.mobile = mobile
+
+        self.email = email
+        self.password = password
+        self.countryCode = countryCode
+
+    }
+    
+    func getParams()-> [String: Any]{
+                
+        var para = [String: String]()
+        
+        //
+        if let planId = planId{ para["planId"] = String(planId) }
+                
+        if let name = name{ para["name"] = name }
+        
+        if let mobile = mobile{ para["mobile"] = mobile }
+
+        if let email = email{ para["email"] = email }
+
+        if let password = password{
+            para["password"] = password
+            para["verify_password"] = password
+        }
+
+        if let countryCode = countryCode{ para["code"] = countryCode }
+
+        if let name = name{ para["name"] = name }
+
+
+        
+        return para
+    }
+}
