@@ -38,6 +38,9 @@ open class ConnectMiddleware: ConnectMiddlewareProtocol {
         configuration.httpAdditionalHeaders = HTTPHeaders.default.dictionary
         configuration.timeoutIntervalForResource = 30
         configuration.timeoutIntervalForRequest = 30
+        
+        configuration.headers["accept"] = "application/json"
+        
         let session = Session(configuration: configuration, interceptor: Interceptor(adapter: self, retrier: self))
         return session
     }()

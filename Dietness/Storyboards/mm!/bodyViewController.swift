@@ -131,11 +131,17 @@ extension bodyViewController:UITableViewDelegate,UITableViewDataSource{
         
         if let path = Bundle.main.path(forResource: fileName, ofType: fileType){
             do{
-                let data = try Data(contentsOf: URL(filePath: path),options: .mappedIfSafe)
-                arrDisLiked = try! JSONDecoder().decode(DisLiked.self, from: data)
-                self.tblCheckList.reloadData()
-                print(arrDisLiked.count, "Ali")
-                calculateTableViewHeight() // Adjust the table view's height after loading data
+                if #available(iOS 16.0, *) {
+                    let data = try Data(contentsOf: URL(filePath: path),options: .mappedIfSafe)
+                    
+                    arrDisLiked = try! JSONDecoder().decode(DisLiked.self, from: data)
+                    self.tblCheckList.reloadData()
+                    print(arrDisLiked.count, "Ali")
+                    calculateTableViewHeight() // Adjust the table view's height after loading data
+                } else {
+                    // Fallback on earlier versions
+                }
+
 
             }catch{
               print("Json file not found")
