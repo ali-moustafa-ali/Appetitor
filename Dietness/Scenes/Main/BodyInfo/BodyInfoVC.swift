@@ -220,7 +220,52 @@ class BodyInfoVC: UIViewController {
         
     }
     
+    private func checkVerification()->Bool{
+        
+        guard  let weight = weightField.text,
+                !weight.isEmpty else{
+            
+            view.makeToast("Please enter weight")
+            
+            return false
+        }
+        
+        guard let height = heightField.text,
+                !height.isEmpty else{
+            
+            view.makeToast("Please enter height")
+            
+            return false
+        }
+        
+
+        guard let date = dateField.text,
+                !date.isEmpty else{
+            
+            view.makeToast("Please enter date")
+            
+            return false
+        }
+        
+        guard let gender = userInformation?.gender,
+                !gender.isEmpty else{
+            
+            view.makeToast("Please choose gender")
+            
+            return false
+        }
+        
+        return true
+
+    }
+    
     @IBAction func confirmClicked(_ sender: UIButton) {
+        
+        // pass verifications
+        guard checkVerification() else{
+            
+            return
+        }
         
         guard let userInformation = getUserInformation() else{
             
