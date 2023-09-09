@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BodyInfoVC" customModule="Dietness" customModuleProvider="target">
             <connections>
                 <outlet property="confirmButtonOL" destination="sUA-RT-8fF" id="wuh-Pv-kcJ"/>
+                <outlet property="dateField" destination="nk1-v5-oOI" id="1bj-yi-7xj"/>
                 <outlet property="dateOfBirth" destination="n8k-mz-Vnv" id="EAh-tn-jST"/>
                 <outlet property="heightField" destination="hUl-dK-t1b" id="I6L-Od-AWL"/>
                 <outlet property="heightView" destination="eEG-ez-da2" id="XcQ-ej-Vdn"/>

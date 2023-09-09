@@ -39,6 +39,8 @@ class BodyInfoVC: UIViewController {
     
     @IBOutlet weak var heightField: UITextField!
     @IBOutlet weak var weightField: UITextField!
+    
+    @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var confirmButtonOL: UIButton!
     
     
@@ -55,6 +57,8 @@ class BodyInfoVC: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateField.delegate = self
         
         btnRadioAllAction(btnRadioAll[0])
         
@@ -90,7 +94,7 @@ class BodyInfoVC: UIViewController {
         }
         
     }
-
+    
     
     @IBAction func btnCheckUncheckClick(_sender:UIButton){
         _sender.isSelected = !_sender.isSelected
@@ -147,27 +151,29 @@ class BodyInfoVC: UIViewController {
         
         finishedBodyInfoCompletion!(self, userInformation)
         
-//        signUpInformation?.signUpInfo = signUpInfo
+        //        signUpInformation?.signUpInfo = signUpInfo
         
         
     }
     
     private func getUserInformation()->UserInformation?{
-
+        
         if let height = heightField.text,
-           let weight = weightField.text
-//           let phone = phoneTextField.text,
-//           let password = passwordTextField.text
+           let weight = weightField.text,
+           let date = dateField.text
+        //           let phone = phoneTextField.text,
+        //           let password = passwordTextField.text
         {
-
+            
             return UserInformation(weight: weight, height: height,
-                                   birth_date: "12-12-2022", gender: "1", food_system: "1",
+                                   birth_date: date,
+                                   gender: "1", food_system: "1",
                                    allergen_id: ["4","5"], excluded_classifications: ["1","2"])
         }
         
         return nil
     }
-
+    
     
 }
 
@@ -179,8 +185,8 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
         1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return tableView == tblCheckList ? arrDisLiked.count : arrDisLiked2.count
-
+        return tableView == tblCheckList ? arrDisLiked.count : arrDisLiked2.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -200,7 +206,7 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
             
             
             cell.btnCheckUncheck.isSelected = CountrySelect != nil ? true : false
-
+            
             return cell
             
         }else{
@@ -217,7 +223,7 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
             let CountrySelect = arrSelectedCountry2.first{$0.name == "\(countryModel.name)"}
             
             cell.btnCheckUncheck.isSelected = CountrySelect != nil ? true : false
-
+            
             return cell
             
         }
@@ -238,3 +244,37 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
     
 }
 
+//MARK: - Date Picker
+extension BodyInfoVC: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        showDatePicker(for: textField)
+        
+    }
+    
+    func showDatePicker(for textField: UITextField) {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        
+        // Set the date picker's target to call a method when the value changes
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
+        
+        // Set the input view of the text field to the date picker
+        textField.inputView = datePicker
+        
+        // Make the text field become first responder
+        textField.becomeFirstResponder()
+    }
+    
+    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        // Format the selected date and set it as the text field's text
+        dateField.text = dateFormatter.string(from: sender.date)
+        
+    }
+    
+    
+}
