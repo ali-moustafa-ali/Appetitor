@@ -25,7 +25,7 @@ class SignupVC: UIViewController {
     
     
     var planId: Int?
-    var sportingGoalId: Int
+    var sportingGoalId: Int?
     
     
     @IBOutlet weak var stepIndicator: StepIndicatorView!
