@@ -12,7 +12,9 @@ enum RegisterationConnector:Connector,AuthorizedConnector{
     
     
     case login(loginData:String,password:String,code:String?,type:String)
-    case signup(name:String,mobile:String,email:String,password:String,code:String, planId: Int)
+    case signup(dict: [String: Any])
+
+//    case signup(name:String,mobile:String,email:String,password:String,code:String, planId: Int)
     case forgotPassword(emailOrMobile:String,type:String,code:String?)
     case verifyOtpForget(otp:String,emailOrMobile:String,type:String,code:String)
     case verifyOtp(otp:String,emailOrMobile:String,type:String,code:String)
@@ -81,9 +83,11 @@ enum RegisterationConnector:Connector,AuthorizedConnector{
         case .login(let data , let password,let code,let type):
             return Parameter.jsonObject(value: ["emailOrmobile":data,"password":password,"code":code,"type":type])
             
-        case .signup(let name, let mobile, let email, let password, let code, let planId):
+        case .signup(let para):
             
-            let params = Parameter.jsonObject(value: ["name":name,"mobile":mobile,"email":email,"password":password,"verify_password":password,"code":code, "planId": String(planId)])
+//            let dict = ["name":name,"mobile":mobile,"email":email,"password":password,"verify_password":password,"code":code, "planId": String(planId)]
+            
+            let params = Parameter.dictionary(value: para)
             
             print(params)
             

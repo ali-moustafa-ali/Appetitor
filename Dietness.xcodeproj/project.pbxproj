@@ -353,8 +353,8 @@
 		6E36843B25D8375500B7E238 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				EFEA0D862AABC25B0062C175 /* SportsTarget */,
 				D975DBBA25E3273000883435 /* SideMenuItemsVC.swift */,
+				EFEA0D862AABC25B0062C175 /* SportsTarget */,
 				EFEA0D7D2AABB46E0062C175 /* ShowPackagesVC */,
 				6E36843C25D837E900B7E238 /* MainVC */,
 				6E35C26B25D8914600847C2A /* OurPackagesVC */,

@@ -97,6 +97,8 @@ open class Connect {
         session.request(request).cURLDescription(calling: Request.debugLog).validate().responseData { [weak self] response in
             guard let self = self else { return }
 
+            print(response.debugDescription, "response debug description")
+            
             #if DEBUG
             if debugResponse {
                 print((response.data ?? Data()).prettyPrintedJSONString ?? "")
@@ -112,6 +114,7 @@ open class Connect {
             case .success(let data):
                 promise.resolve(with: data)
             case .failure(let error):
+                print(response.result)
                 promise.reject(with: error)
             }
         }

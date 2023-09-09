@@ -31,6 +31,8 @@ public enum Parameter: ParametersRepresentable {
     case path(key: String, value: String)
     case jsonObject(value: Encodable)
     
+    case dictionary(value: [String: Any])
+    
     public func encode(request: URLRequest) throws -> URLRequest {
         switch self {
         case .query(let key, let value):
@@ -43,6 +45,9 @@ public enum Parameter: ParametersRepresentable {
             return try JSONEncoding.default.encode(request, with: value.asDictionary())
         case .queryInt(let key, let value):
             return try URLEncoding.queryString.encode(request, with: [key: value])
+        case .dictionary(let value): // Handle [String: Any] dictionary
+            return try JSONEncoding.default.encode(request, with: value)
+            
         }
     }
 }
