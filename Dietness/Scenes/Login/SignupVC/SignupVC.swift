@@ -31,7 +31,7 @@ class SignupVC: UIViewController {
     var autoActive = false
     var showDeliverySwitch = false
     
-    var signUpInformation: FullSignUpInformation?
+    var signUpInformation = FullSignUpInformation()
 
     var planId: Int?
     
@@ -44,13 +44,13 @@ class SignupVC: UIViewController {
         
         // prepare
         
-        signUpInformation = FullSignUpInformation()
+//        signUpInformation = FullSignUpInformation()
 
-        let userInformation = UserInformation(weight: "120", height: "212",
-                                              birth_date: "12-12-2022", gender: "1", food_system: "1",
-                                              allergen_id: ["4","5"], excluded_classifications: ["1","2"])
-//
-        signUpInformation?.userInformation = userInformation
+//        let userInformation = UserInformation(weight: "120", height: "212",
+//                                              birth_date: "12-12-2022", gender: "1", food_system: "1",
+//                                              allergen_id: ["4","5"], excluded_classifications: ["1","2"])
+////
+//        signUpInformation?.userInformation = userInformation
         
     }
 
@@ -58,7 +58,7 @@ class SignupVC: UIViewController {
     func signup(){
         self.view.makeToastActivity(.center)
         
-        guard let signUpInformationPara = signUpInformation?.getParams() else {
+        guard let signUpInformationPara = signUpInformation.getParams() else {
     
             self.view.makeToast("some data are missing")
     
@@ -90,10 +90,14 @@ class SignupVC: UIViewController {
                     
                     vc.didAddAddress = { [weak self] in
                         let otpVC:OtpVC = OtpVC.instantiate(appStoryboard: .login)
+                        
                         otpVC.comingFrom = "signup"
                         otpVC.type = "email"
                         otpVC.email = self?.emailTextField.text ?? ""
                         otpVC.autoActive = self?.autoActive
+                        
+                        self?.stepIndicator.currentStep = 5
+                        
                         self?.navigationController?.pushViewController(otpVC, animated: true)
                     }
                     
@@ -129,7 +133,7 @@ class SignupVC: UIViewController {
         }
     }
     
-    func showSportsTargetScreen(){
+    private func showSportsTargetScreen(){
         
         let sportsTargetVc = SportsTargetVC.instantiate(appStoryboard: .main) as! SportsTargetVC
         
@@ -137,17 +141,44 @@ class SignupVC: UIViewController {
             
             vc.dismiss(animated: true)
             
-            self?.signUpInformation?.sportsTargetId = targetId
+            self?.signUpInformation.sportsTargetId = targetId
             
+            //self.show
+
             self?.stepIndicator.currentStep = 3
+            self?.showBodyInfoScreen()
             
-            self?.signup()
             
             print(targetId, "tar idddd")
         }
     
         self.present(sportsTargetVc, animated: true, completion: nil)
     }
+    
+    
+    private func showBodyInfoScreen(){
+        
+        let bodyInfoVC = BodyInfoVC(nibName: "BodyInfoVC", bundle: nil)
+        
+        bodyInfoVC.finishedBodyInfoCompletion = { [weak self] vc , userInfo in
+            
+            vc.dismiss(animated: true)
+            
+            self?.signUpInformation.userInformation = userInfo
+              
+            self?.stepIndicator.currentStep = 4
+            
+            //
+            self?.signup()
+            
+            print(userInfo, "userInfo ")
+        }
+    
+        self.present(bodyInfoVC, animated: true, completion: nil)
+    }
+    
+    
+    
     
     private func getSignUpInfo()->SignUpInfo?{
         
@@ -168,6 +199,7 @@ class SignupVC: UIViewController {
     // MARK: Actions
     @IBAction func signup(_ sender: Any) {
         
+        // 1
         guard let signUpInfo = getSignUpInfo() else{
             
             view.makeToast("Please complete all required data")
@@ -175,11 +207,16 @@ class SignupVC: UIViewController {
             return
         }
         
-        signUpInformation?.signUpInfo = signUpInfo
-                
-        stepIndicator.currentStep = 2
+        signUpInformation.signUpInfo = signUpInfo
         
+        
+        //2
+        stepIndicator.currentStep = 2
         showSportsTargetScreen()
+
+        
+
+                
         
     }
     @IBAction func loginBtnAction(_ sender: Any) {

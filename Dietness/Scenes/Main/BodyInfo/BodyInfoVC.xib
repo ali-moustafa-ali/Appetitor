@@ -2,22 +2,25 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="bodyViewController" customModule="Ali" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BodyInfoVC" customModule="Dietness" customModuleProvider="target">
             <connections>
                 <outlet property="confirmButtonOL" destination="sUA-RT-8fF" id="wuh-Pv-kcJ"/>
                 <outlet property="dateOfBirth" destination="n8k-mz-Vnv" id="EAh-tn-jST"/>
+                <outlet property="heightField" destination="hUl-dK-t1b" id="I6L-Od-AWL"/>
                 <outlet property="heightView" destination="eEG-ez-da2" id="XcQ-ej-Vdn"/>
                 <outlet property="hiehtOfFirstTable" destination="HAh-NN-Trn" id="rtZ-zy-9i6"/>
                 <outlet property="hiehtOfFirstTable2" destination="ynS-uu-Kv1" id="Qfd-fN-B83"/>
                 <outlet property="tblCheckList" destination="ghh-Yl-U3n" id="3cW-Pu-hqg"/>
                 <outlet property="tblCheckList2" destination="0bF-Vt-hkF" id="D76-cy-z2f"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weightField" destination="2Sv-Md-XZ1" id="3Ys-Nt-eoi"/>
                 <outlet property="weightView" destination="1pu-Z6-beV" id="IGI-EW-8CA"/>
                 <outletCollection property="btnRadioAll" destination="3go-N7-WpO" collectionClass="NSMutableArray" id="Zxi-tT-H1t"/>
                 <outletCollection property="btnRadioAll" destination="md5-j9-m9B" collectionClass="NSMutableArray" id="xxj-74-fre"/>
@@ -68,7 +71,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-Z6-beV" userLabel="weightView">
                                             <rect key="frame" x="0.0" y="40.333333333333343" width="353" height="55"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Sv-Md-XZ1">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Sv-Md-XZ1">
                                                     <rect key="frame" x="5" y="5" width="343" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -86,7 +89,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEG-ez-da2" userLabel="heightView">
                                             <rect key="frame" x="0.0" y="115.33333333333331" width="353" height="55"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUl-dK-t1b">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Height" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUl-dK-t1b">
                                                     <rect key="frame" x="5" y="5" width="343" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -104,7 +107,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8k-mz-Vnv" userLabel="dateOfBirth">
                                             <rect key="frame" x="0.0" y="190.33333333333331" width="353" height="55"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nk1-v5-oOI">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nk1-v5-oOI">
                                                     <rect key="frame" x="5" y="5" width="343" height="45"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
