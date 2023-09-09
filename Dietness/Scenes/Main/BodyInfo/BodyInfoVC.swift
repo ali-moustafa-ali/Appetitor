@@ -44,8 +44,9 @@ class BodyInfoVC: UIViewController {
     @IBOutlet weak var confirmButtonOL: UIButton!
     
     
-    var arrDisLiked = [DisLikedElement]()
-    var arrSelectedCountry = [DisLikedElement]()
+    var dislikedClassifications: [DislikedClassification] = []
+    
+    var selectedDislikedClassifications = [DislikedClassification]()
     
     var arrDisLiked2 = [DisLikedElement2]()
     var arrSelectedCountry2 = [DisLikedElement2]()
@@ -76,6 +77,9 @@ class BodyInfoVC: UIViewController {
         confirmButtonOL.layer.cornerRadius = 5 // Adjust the value as needed
         confirmButtonOL.clipsToBounds = true // This ensures the corner radius is applied
         
+        
+        getDislikedClassifications()
+        
     }
     
     
@@ -85,6 +89,36 @@ class BodyInfoVC: UIViewController {
         view.layer.borderWidth = 1.0
         view.layer.cornerRadius = cornerRadius
     }
+    
+    func getDislikedClassifications() {
+        self.view.makeToastActivity(.center)
+        
+        Connect.default.request(MainConnector.getDislikedClassifications).decoded(toType: DislikedClassificationsModel.self).observe { [weak self] (result) in
+            guard let self = self else {return}
+            self.view.hideToastActivity()
+            
+            switch result {
+    
+            case .success(let data):
+                print("packages success")
+                self.dislikedClassifications = data.result ?? []
+                print(self.dislikedClassifications)
+
+                self.tblCheckList.reloadData()
+
+                
+                
+            case .failure(let error):
+                print("packages failed")
+                self.view.makeToast(error.localizedDescription)
+            }
+        }
+    }
+    
+    
+    //MARK: API
+    
+    
     
     // MARK: Actions
     @IBAction func btnRadioAllAction(_ sender: UIButton) {
@@ -106,24 +140,24 @@ class BodyInfoVC: UIViewController {
     
     
     @IBAction func btnCheckUncheckClick(_sender:UIButton){
-        _sender.isSelected = !_sender.isSelected
-        let selectedCountry = arrDisLiked[_sender.tag]
-        var isExist = false
-        for i in 0..<arrSelectedCountry.count{
-            let countryModel = arrSelectedCountry[i]
-            if countryModel.name == selectedCountry.name{
-                isExist = true
-                arrSelectedCountry.remove(at: i)
-                return
-            }
-        }
-        
-        if !isExist{
-            arrSelectedCountry.append(selectedCountry)
-        }
-        tblCheckList.reloadData()
-        print(arrSelectedCountry.description)
-        calculateTableViewHeight() // Adjust the table view's height after loading data
+//        _sender.isSelected = !_sender.isSelected
+//        let selectedCountry = arrDisLiked[_sender.tag]
+//        var isExist = false
+//        for i in 0..<arrSelectedCountry.count{
+//            let countryModel = arrSelectedCountry[i]
+//            if countryModel.name == selectedCountry.name{
+//                isExist = true
+//                arrSelectedCountry.remove(at: i)
+//                return
+//            }
+//        }
+//
+//        if !isExist{
+//            arrSelectedCountry.append(selectedCountry)
+//        }
+//        tblCheckList.reloadData()
+//        print(arrSelectedCountry.description)
+//        calculateTableViewHeight() // Adjust the table view's height after loading data
         
     }
     
@@ -203,7 +237,7 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
         1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == tblCheckList ? arrDisLiked.count : arrDisLiked2.count
+        return tableView == tblCheckList ? dislikedClassifications.count : arrDisLiked2.count
         
     }
     
@@ -211,19 +245,23 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
         if tableView == tblCheckList {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellOfDissLiked") as! cellOfDissLiked
             
-            let countryModel =  arrDisLiked[indexPath.row]
+            let dislikedClassificationsModel = dislikedClassifications[indexPath.row]
             
-            cell.lblCountry.text = countryModel.name
+            let title = Helper.language == "ar" ? dislikedClassificationsModel.titleAr : dislikedClassificationsModel.titleEn
+            
+            
+            cell.lblCountry.text = title
             cell.btnCheckUncheck.tag = indexPath.row
             cell.btnCheckUncheck.setImage(UIImage.init(named: "uncheck"), for: .normal)
             cell.btnCheckUncheck.setImage(UIImage.init(named: "check"), for: .selected)
+            
             cell.btnCheckUncheck.addTarget(self, action: #selector(btnCheckUncheckClick(_sender:)), for: .touchUpInside)
             
             
-            let CountrySelect = arrSelectedCountry.first{$0.name == "\(countryModel.name)"}
+            let selectedDislikedClassification = selectedDislikedClassifications.first{$0.titleEn == "\(dislikedClassificationsModel.titleEn)"}
             
             
-            cell.btnCheckUncheck.isSelected = CountrySelect != nil ? true : false
+            cell.btnCheckUncheck.isSelected = selectedDislikedClassification != nil ? true : false
             
             return cell
             

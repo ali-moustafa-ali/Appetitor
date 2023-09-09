@@ -117,6 +117,8 @@
 		D9D33D2A25D3F8D0002724C7 /* ExUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D33D2925D3F8D0002724C7 /* ExUIView.swift */; };
 		D9D33D2C25D3F90E002724C7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D33D2B25D3F90E002724C7 /* CardView.swift */; };
 		D9D33D2E25D3F929002724C7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D33D2D25D3F929002724C7 /* RoundedButton.swift */; };
+		EF2272702AACE47E005ACB6A /* Allergens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22726F2AACE47E005ACB6A /* Allergens.swift */; };
+		EF2272722AACE517005ACB6A /* DislikedClassifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2272712AACE517005ACB6A /* DislikedClassifications.swift */; };
 		EFEA0D7C2AAB95890062C175 /* FoodSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA0D7B2AAB95890062C175 /* FoodSystem.swift */; };
 		EFEA0D802AABB4920062C175 /* ShowPackagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA0D7E2AABB4920062C175 /* ShowPackagesVC.swift */; };
 		EFEA0D882AABC28B0062C175 /* SportsTargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEA0D872AABC28B0062C175 /* SportsTargetVC.swift */; };
@@ -253,6 +255,8 @@
 		D9D33D2B25D3F90E002724C7 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D9D33D2D25D3F929002724C7 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		E4EF3AEF35C4A9D265D186C3 /* Pods_Dietness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dietness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF22726F2AACE47E005ACB6A /* Allergens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergens.swift; sourceTree = "<group>"; };
+		EF2272712AACE517005ACB6A /* DislikedClassifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DislikedClassifications.swift; sourceTree = "<group>"; };
 		EFEA0D7B2AAB95890062C175 /* FoodSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSystem.swift; sourceTree = "<group>"; };
 		EFEA0D7E2AABB4920062C175 /* ShowPackagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPackagesVC.swift; sourceTree = "<group>"; };
 		EFEA0D872AABC28B0062C175 /* SportsTargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTargetVC.swift; sourceTree = "<group>"; };
@@ -292,9 +296,9 @@
 		33A294EF2AACAEFA00FE0290 /* BodyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				EFA1E8592AACB9B700C12A32 /* Cell */,
 				33A294F02AACAEFA00FE0290 /* DisLikedList.swift */,
 				33A294F42AACAEFA00FE0290 /* DisLikedList2.swift */,
-				EFA1E8592AACB9B700C12A32 /* Cell */,
 				33A294F52AACAEFA00FE0290 /* BodyInfoVC.swift */,
 				33A294F32AACAEFA00FE0290 /* BodyInfoVC.xib */,
 			);
@@ -655,6 +659,7 @@
 		D9D33D2025D3E5A7002724C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF22726E2AACE470005ACB6A /* BodyInfoModels */,
 				EFEA0D7A2AAB957E0062C175 /* HomeModels */,
 				D9D141FE25E6C2D60051CEE6 /* Request */,
 				6EE17A5725D4397B0093B493 /* CategoriesResponse.swift */,
@@ -733,6 +738,15 @@
 				6EE17A6F25D453C40093B493 /* ViewExtension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EF22726E2AACE470005ACB6A /* BodyInfoModels */ = {
+			isa = PBXGroup;
+			children = (
+				EF22726F2AACE47E005ACB6A /* Allergens.swift */,
+				EF2272712AACE517005ACB6A /* DislikedClassifications.swift */,
+			);
+			path = BodyInfoModels;
 			sourceTree = "<group>";
 		};
 		EFA1E8592AACB9B700C12A32 /* Cell */ = {
@@ -920,6 +934,7 @@
 				6EE17A6225D4421D0093B493 /* SignUpResponse.swift in Sources */,
 				D9D33D1325D3E515002724C7 /* Connect.swift in Sources */,
 				6EE17A5E25D440BB0093B493 /* DefaultResponse.swift in Sources */,
+				EF2272702AACE47E005ACB6A /* Allergens.swift in Sources */,
 				6EE17A8D25D454320093B493 /* FSPagerViewLayoutAttributes.swift in Sources */,
 				D9D33D1525D3E515002724C7 /* EncodableExtension.swift in Sources */,
 				D9D33CF425D3E4C3002724C7 /* EndPoints.swift in Sources */,
@@ -969,6 +984,7 @@
 				EFEA0D7C2AAB95890062C175 /* FoodSystem.swift in Sources */,
 				6E37AE3725D550D500B19B69 /* Colors.swift in Sources */,
 				6EE17A8E25D454320093B493 /* FSPagerCollectionView.swift in Sources */,
+				EF2272722AACE517005ACB6A /* DislikedClassifications.swift in Sources */,
 				6E35C27125D89A0A00847C2A /* PackagesCell.swift in Sources */,
 				D914D54A265D47C3009690FD /* GetOrderByDayResponse.swift in Sources */,
 				D975DBC225E3333900883435 /* CountryCell.swift in Sources */,

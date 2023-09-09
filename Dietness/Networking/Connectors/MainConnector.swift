@@ -19,6 +19,9 @@ enum MainConnector: Connector, AuthorizedConnector{
     
     case foodSystems
     case sportTargets
+    case getAllergens
+    case getDislikedClassifications
+    
     case setting
 
     var baseURL: URL{
@@ -35,6 +38,11 @@ enum MainConnector: Connector, AuthorizedConnector{
     
     var endpoint: String{
         switch self {
+            
+        case .getDislikedClassifications:
+            return EndPoints.dislikedClassifications
+        case .getAllergens:
+            return EndPoints.allergens
         case .sportTargets:
             return EndPoints.sportTargets
         case .foodSystems:
