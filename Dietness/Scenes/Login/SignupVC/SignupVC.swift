@@ -196,8 +196,64 @@ class SignupVC: UIViewController {
         return nil
     }
     
+    
+    private func checkVerification()->Bool{
+        
+        guard let fullName = fullNameTextField.text,
+              fullName.count > 10 else{
+            
+            view.makeToast("Please enter full name")
+            
+            return false
+        }
+        
+        guard let email = emailTextField.text,
+                !email.isEmpty else{
+            
+            view.makeToast("Please enter email")
+            
+            return false
+        }
+        
+
+        guard let phone = phoneTextField.text,
+                !phone.isEmpty else{
+            
+            view.makeToast("Please enter phone")
+            
+            return false
+        }
+        
+        guard let password = passwordTextField.text,
+                !password.isEmpty else{
+            
+            view.makeToast("Please choose password")
+            
+            return false
+        }
+        
+        guard let verifyPassword = confirmPasswordTextField.text,
+                !verifyPassword.isEmpty else{
+            
+            view.makeToast("Please choose confirm password")
+            
+            return false
+        }
+        
+        return true
+
+    }
+    
     // MARK: Actions
     @IBAction func signup(_ sender: Any) {
+        
+        
+        // 0
+        guard checkVerification() else{
+            
+            return
+        }
+        
         
         // 1
         guard let signUpInfo = getSignUpInfo() else{
