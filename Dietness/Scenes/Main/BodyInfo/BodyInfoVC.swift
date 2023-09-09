@@ -58,6 +58,12 @@ class BodyInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        userInformation = UserInformation(weight: nil, height: nil,
+                                          birth_date: nil, gender: nil,
+                                          food_system: nil, allergen_id: nil,
+                                          excluded_classifications: nil)
+        
         dateField.delegate = self
         
         btnRadioAllAction(btnRadioAll[0])
@@ -85,7 +91,10 @@ class BodyInfoVC: UIViewController {
         
         print("Tag of the clicked button>>>", sender.tag)
         
+        userInformation?.gender = "\(sender.tag)"
+        
         for btn in btnRadioAll{
+            
             if sender.tag == btn.tag{ //Clicked button tag
                 btn.setImage(UIImage(named: "ic_On"), for: .normal)
             }else{
@@ -119,14 +128,22 @@ class BodyInfoVC: UIViewController {
     }
     
     @IBAction func btnCheckUncheckClick2(_sender:UIButton){
+        
         _sender.isSelected = !_sender.isSelected
+        
         let selectedCountry = arrDisLiked2[_sender.tag]
+        
         var isExist = false
+        
         for i in 0..<arrSelectedCountry2.count{
+            
             let countryModel = arrSelectedCountry2[i]
+            
             if countryModel.name == selectedCountry.name{
                 isExist = true
+                
                 arrSelectedCountry2.remove(at: i)
+                
                 return
             }
         }
@@ -134,8 +151,11 @@ class BodyInfoVC: UIViewController {
         if !isExist{
             arrSelectedCountry2.append(selectedCountry)
         }
+        
         tblCheckList2.reloadData()
+        
         print(arrSelectedCountry2.description)
+        
         calculateTableViewHeight2() // Adjust the table view's height after loading data
         
     }
@@ -151,23 +171,21 @@ class BodyInfoVC: UIViewController {
         
         finishedBodyInfoCompletion!(self, userInformation)
         
-        //        signUpInformation?.signUpInfo = signUpInfo
-        
-        
     }
     
     private func getUserInformation()->UserInformation?{
         
         if let height = heightField.text,
            let weight = weightField.text,
-           let date = dateField.text
+           let date = dateField.text,
+           let gender = userInformation?.gender
         //           let phone = phoneTextField.text,
         //           let password = passwordTextField.text
         {
             
             return UserInformation(weight: weight, height: height,
                                    birth_date: date,
-                                   gender: "1", food_system: "1",
+                                   gender: gender, food_system: "1",
                                    allergen_id: ["4","5"], excluded_classifications: ["1","2"])
         }
         
