@@ -48,7 +48,7 @@ class EndPoints{
     static let sportTargets = "/sport-targets"
     
     static let allergens = "/allergens"
-    static let dislikedClassifications = "/classifications"
+    static let dislikedClassifications = "classifications"
 
     
     

@@ -48,8 +48,8 @@ class BodyInfoVC: UIViewController {
     
     var selectedDislikedClassifications = [DislikedClassification]()
     
-    var arrDisLiked2 = [DisLikedElement2]()
-    var arrSelectedCountry2 = [DisLikedElement2]()
+    var allergenItems = [AllergenItem]()
+    var selectedAllergenItems = [AllergenItem]()
     
     var userInformation: UserInformation?
     
@@ -80,6 +80,8 @@ class BodyInfoVC: UIViewController {
         
         getDislikedClassifications()
         
+        getAllergenItems()
+        
     }
     
     
@@ -89,7 +91,8 @@ class BodyInfoVC: UIViewController {
         view.layer.borderWidth = 1.0
         view.layer.cornerRadius = cornerRadius
     }
-    
+    //MARK: API
+
     func getDislikedClassifications() {
         self.view.makeToastActivity(.center)
         
@@ -115,8 +118,30 @@ class BodyInfoVC: UIViewController {
         }
     }
     
+    func getAllergenItems() {
+        self.view.makeToastActivity(.center)
+        
+        Connect.default.request(MainConnector.getAllergens).decoded(toType: AllergensModel.self).observe { [weak self] (result) in
+            guard let self = self else {return}
+            self.view.hideToastActivity()
+            
+            switch result {
     
-    //MARK: API
+            case .success(let data):
+                print("allergenItems success")
+                self.allergenItems = data.result ?? []
+                print(self.allergenItems)
+
+                self.tblCheckList2.reloadData()
+
+                
+                
+            case .failure(let error):
+                print("allergenItems failed")
+                self.view.makeToast(error.localizedDescription)
+            }
+        }
+    }
     
     
     
@@ -139,58 +164,59 @@ class BodyInfoVC: UIViewController {
     }
     
     
-    @IBAction func btnCheckUncheckClick(_sender:UIButton){
-//        _sender.isSelected = !_sender.isSelected
-//        let selectedCountry = arrDisLiked[_sender.tag]
-//        var isExist = false
-//        for i in 0..<arrSelectedCountry.count{
-//            let countryModel = arrSelectedCountry[i]
-//            if countryModel.name == selectedCountry.name{
-//                isExist = true
-//                arrSelectedCountry.remove(at: i)
-//                return
-//            }
-//        }
-//
-//        if !isExist{
-//            arrSelectedCountry.append(selectedCountry)
-//        }
-//        tblCheckList.reloadData()
-//        print(arrSelectedCountry.description)
-//        calculateTableViewHeight() // Adjust the table view's height after loading data
-        
-    }
-    
-    @IBAction func btnCheckUncheckClick2(_sender:UIButton){
-        
+    @IBAction func btnCheckUncheckClick(_sender: UIButton){
         _sender.isSelected = !_sender.isSelected
         
-        let selectedCountry = arrDisLiked2[_sender.tag]
+        let newSelectedItem = dislikedClassifications[_sender.tag]
         
         var isExist = false
         
-        for i in 0..<arrSelectedCountry2.count{
+        // remove if exists
+        for i in 0..<selectedDislikedClassifications.count{
+            let item = selectedDislikedClassifications[i]
             
-            let countryModel = arrSelectedCountry2[i]
-            
-            if countryModel.name == selectedCountry.name{
+            if item.id == newSelectedItem.id{
                 isExist = true
-                
-                arrSelectedCountry2.remove(at: i)
-                
+                selectedDislikedClassifications.remove(at: i)
+                return
+            }
+            
+        }
+
+        if !isExist{
+            selectedDislikedClassifications.append(newSelectedItem)
+        }
+        
+        tblCheckList.reloadData()
+        
+    }
+    
+    @IBAction func btnCheckUncheckClick2(_sender: UIButton){
+        
+        _sender.isSelected = !_sender.isSelected
+
+        let newSelectedItem = allergenItems[_sender.tag]
+
+        var isExist = false
+
+        for i in 0..<selectedAllergenItems.count{
+
+            let item = selectedAllergenItems[i]
+
+            if item.id == newSelectedItem.id{
+                isExist = true
+
+                selectedAllergenItems.remove(at: i)
+
                 return
             }
         }
-        
+
         if !isExist{
-            arrSelectedCountry2.append(selectedCountry)
+            selectedAllergenItems.append(newSelectedItem)
         }
-        
+
         tblCheckList2.reloadData()
-        
-        print(arrSelectedCountry2.description)
-        
-        calculateTableViewHeight2() // Adjust the table view's height after loading data
         
     }
     
@@ -212,15 +238,13 @@ class BodyInfoVC: UIViewController {
         if let height = heightField.text,
            let weight = weightField.text,
            let date = dateField.text,
-           let gender = userInformation?.gender
-        //           let phone = phoneTextField.text,
-        //           let password = passwordTextField.text
-        {
+           let gender = userInformation?.gender{
             
             return UserInformation(weight: weight, height: height,
                                    birth_date: date,
                                    gender: gender, food_system: "1",
-                                   allergen_id: ["4","5"], excluded_classifications: ["1","2"])
+                                   allergen_id: selectedAllergenItems.map({ String($0.id) }),
+                                   excluded_classifications: selectedDislikedClassifications.map({ String($0.id) }))
         }
         
         return nil
@@ -237,7 +261,7 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
         1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == tblCheckList ? dislikedClassifications.count : arrDisLiked2.count
+        return tableView == tblCheckList ? dislikedClassifications.count : allergenItems.count
         
     }
     
@@ -258,8 +282,7 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
             cell.btnCheckUncheck.addTarget(self, action: #selector(btnCheckUncheckClick(_sender:)), for: .touchUpInside)
             
             
-            let selectedDislikedClassification = selectedDislikedClassifications.first{$0.titleEn == "\(dislikedClassificationsModel.titleEn)"}
-            
+            let selectedDislikedClassification = selectedDislikedClassifications.first{$0.id == dislikedClassificationsModel.id}
             
             cell.btnCheckUncheck.isSelected = selectedDislikedClassification != nil ? true : false
             
@@ -268,17 +291,20 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellOfDissLiked") as! cellOfDissLiked
             
-            let countryModel =  arrDisLiked2[indexPath.row]
+            let allergenItemsModel = allergenItems[indexPath.row]
             
-            cell.lblCountry.text = countryModel.name
+            let title = Helper.language == "ar" ? allergenItemsModel.nameAr : allergenItemsModel.nameEn
+
+            
+            cell.lblCountry.text = title
             cell.btnCheckUncheck.tag = indexPath.row
             cell.btnCheckUncheck.setImage(UIImage.init(named: "uncheck"), for: .normal)
             cell.btnCheckUncheck.setImage(UIImage.init(named: "check"), for: .selected)
-            cell.btnCheckUncheck.addTarget(self, action: #selector(btnCheckUncheckClick(_sender:)), for: .touchUpInside)
+            cell.btnCheckUncheck.addTarget(self, action: #selector(btnCheckUncheckClick2(_sender:)), for: .touchUpInside)
             
-            let CountrySelect = arrSelectedCountry2.first{$0.name == "\(countryModel.name)"}
+            let selectedAllergenItem = selectedAllergenItems.first{$0.id == allergenItemsModel.id}
             
-            cell.btnCheckUncheck.isSelected = CountrySelect != nil ? true : false
+            cell.btnCheckUncheck.isSelected = selectedAllergenItem != nil ? true : false
             
             return cell
             
@@ -302,6 +328,7 @@ extension BodyInfoVC:UITableViewDelegate,UITableViewDataSource{
 
 //MARK: - Date Picker
 extension BodyInfoVC: UITextFieldDelegate {
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         showDatePicker(for: textField)

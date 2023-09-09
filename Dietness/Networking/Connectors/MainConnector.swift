@@ -19,13 +19,31 @@ enum MainConnector: Connector, AuthorizedConnector{
     
     case foodSystems
     case sportTargets
+    
     case getAllergens
     case getDislikedClassifications
     
     case setting
 
     var baseURL: URL{
-        return URL(string: EndPoints.baseUrl)!
+        
+        switch self {
+            
+        case .getDislikedClassifications:
+            
+            var urlString = EndPoints.baseUrl
+            
+            let userToRemove = "user"
+            
+            if urlString.contains(userToRemove) {
+                urlString = urlString.replacingOccurrences(of: userToRemove, with: "")
+            }
+            
+            
+            return URL(string: urlString)!
+        default:
+            return URL(string: EndPoints.baseUrl)!
+        }
     }
     
     var authorizationToken: AuthorizationToken?{
