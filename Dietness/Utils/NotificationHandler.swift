@@ -193,7 +193,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
         let action = userInfo.first(where:  { $0.key as! String == "action"})?.value
         let center = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
-        content.title = "Dietness"
+        content.title = "Appetitor"
         content.body = "\(value ?? "")"
         UserDefaults.standard.setValue("\(action ?? "")", forKey: "NValue")
         content.sound = .default

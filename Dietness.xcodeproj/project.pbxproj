@@ -222,7 +222,7 @@
 		D986A2EE25D7342100044566 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		D986A2F025D82CAE00044566 /* MainConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConnector.swift; sourceTree = "<group>"; };
 		D9D141FF25E6C2EB0051CEE6 /* OrderRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRequest.swift; sourceTree = "<group>"; };
-		D9D33CDB25D3E42A002724C7 /* Dietness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dietness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9D33CDB25D3E42A002724C7 /* Appetitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D33CDE25D3E42A002724C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D33CE525D3E42A002724C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9D33CE725D3E42E002724C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -589,7 +589,7 @@
 		D9D33CDC25D3E42A002724C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D9D33CDB25D3E42A002724C7 /* Dietness.app */,
+				D9D33CDB25D3E42A002724C7 /* Appetitor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -793,9 +793,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D9D33CDA25D3E42A002724C7 /* Dietness */ = {
+		D9D33CDA25D3E42A002724C7 /* Appetitor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9D33CEF25D3E42E002724C7 /* Build configuration list for PBXNativeTarget "Dietness" */;
+			buildConfigurationList = D9D33CEF25D3E42E002724C7 /* Build configuration list for PBXNativeTarget "Appetitor" */;
 			buildPhases = (
 				EC913A7A07D95EC4AE6B9C81 /* [CP] Check Pods Manifest.lock */,
 				D9D33CD725D3E42A002724C7 /* Sources */,
@@ -807,9 +807,9 @@
 			);
 			dependencies = (
 			);
-			name = Dietness;
+			name = Appetitor;
 			productName = Dietness;
-			productReference = D9D33CDB25D3E42A002724C7 /* Dietness.app */;
+			productReference = D9D33CDB25D3E42A002724C7 /* Appetitor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -843,7 +843,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D9D33CDA25D3E42A002724C7 /* Dietness */,
+				D9D33CDA25D3E42A002724C7 /* Appetitor */,
 			);
 		};
 /* End PBXProject section */
@@ -1219,7 +1219,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9CAXFB2LMV;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = Dietness/Info.plist;
@@ -1228,8 +1228,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.Dietness;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.appetitoral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dietness/Extensions/FSPagerView/Dietness-Bridging-Header.h";
@@ -1249,7 +1249,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9CAXFB2LMV;
 				ENABLE_BITCODE = NO;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = Dietness/Info.plist;
@@ -1258,8 +1258,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.Dietness;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.appetitoral;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Dietness/Extensions/FSPagerView/Dietness-Bridging-Header.h";
@@ -1280,7 +1280,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9D33CEF25D3E42E002724C7 /* Build configuration list for PBXNativeTarget "Dietness" */ = {
+		D9D33CEF25D3E42E002724C7 /* Build configuration list for PBXNativeTarget "Appetitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9D33CF025D3E42E002724C7 /* Debug */,
