@@ -13,6 +13,7 @@ import SideMenu
 import FirebaseMessaging
 
 class MainVC: UIViewController {
+    @IBOutlet weak var contdentView: UIView!
     
     @IBOutlet weak var pagerView: FSPagerView!{
         didSet {
@@ -151,8 +152,7 @@ extension MainVC: UITableViewDataSource, UITableViewDelegate {
         
         let title = Helper.language == "ar" ? foodSystems[indexPath.row].nameAr : foodSystems[indexPath.row].nameEn
         cell.titleLbl.text = title
-        
-        
+
         cell.moreBtnOutlet.onTap { [weak self] in
 //
             let vc = self!.pushToSignUp()
@@ -191,6 +191,7 @@ extension MainVC :  FSPagerViewDelegate, FSPagerViewDataSource {
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
         var imgURL = ""
         if sliders.count == 1 {
@@ -204,7 +205,7 @@ extension MainVC :  FSPagerViewDelegate, FSPagerViewDataSource {
             
         }
         
-        cell.imageView?.contentMode = .scaleAspectFit
+        cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.clipsToBounds = true
         return cell
     }
@@ -213,3 +214,19 @@ extension MainVC :  FSPagerViewDelegate, FSPagerViewDataSource {
 
 
 
+extension UIColor {
+    convenience init(hex: String) {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+
+        var rgb: UInt64 = 0
+
+        Scanner(string: hexSanitized).scanHexInt64(&rgb)
+
+        let red = CGFloat((rgb & 0xFF0000) >> 16) / 255.0
+        let green = CGFloat((rgb & 0x00FF00) >> 8) / 255.0
+        let blue = CGFloat(rgb & 0x0000FF) / 255.0
+
+        self.init(red: red, green: green, blue: blue, alpha: 1.0)
+    }
+}

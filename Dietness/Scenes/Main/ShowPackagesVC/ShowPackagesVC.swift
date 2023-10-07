@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MOLH
 
 class ShowPackagesVC: UIViewController {
         
@@ -20,7 +21,8 @@ class ShowPackagesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Check the current language setting
+         
         // Do any additional setup after loading the view.
         
         getPackages()
@@ -64,19 +66,18 @@ extension ShowPackagesVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! NewPackagesCell
-
         let imgURL = "\(imageURL)/\(packages[indexPath.row].image ?? "")"
-
-        if let url = URL(string: imgURL) {
-            cell.packageImage.sd_setImage(with: url, placeholderImage: UIImage.init(named: "default"))
-        }
-
+//
+//        if let url = URL(string: imgURL) {
+//            cell.packageImage.sd_setImage(with: url, placeholderImage: UIImage.init(named: "default"))
+//        }
+        cell.titleLbl.text = packages[indexPath.row].name
         cell.moreBtnOutlet.onTap { [weak self] in
 
             let vc = self?.storyboard?.instantiateViewController(identifier: "PackagePopUpVC") as! PackagePopUpVC
 
             vc.package = self?.packages[indexPath.row]
-            vc.imageURL = imgURL
+//            vc.imageURL = imgURL
 
             //
             vc.didTapSubscribe = {[weak self] planId in
@@ -98,6 +99,7 @@ extension ShowPackagesVC: UITableViewDataSource, UITableViewDelegate {
 
 class NewPackagesCell: UITableViewCell {
 
+    @IBOutlet weak var contentView22: UIView!
     
     @IBOutlet weak var packageImage: UIImageView!
     @IBOutlet weak var moreBtnOutlet: UIButton!
@@ -107,8 +109,22 @@ class NewPackagesCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        
+        // Apply shadow to contentView22
+        contentView22.layer.masksToBounds = false
+        contentView22.layer.shadowColor = UIColor.black.cgColor // Shadow color
+        contentView22.layer.shadowOpacity = 0.2 // Shadow opacity
+        contentView22.layer.shadowOffset = CGSize(width: 0, height: 3) // Shadow offset
+        contentView22.layer.shadowRadius = 5 // Shadow radius
+
+        
+        if MOLHLanguage.currentAppleLanguage() == "ar" {
+            // Set the button text for Arabic
+            moreBtnOutlet.setTitle(NSLocalizedString("More", tableName: nil, bundle: Bundle.main, value: "", comment: ""), for: .normal)
+        } else {
+            // Set the button text for other languages (e.g., English)
+            moreBtnOutlet.setTitle(NSLocalizedString("More", tableName: nil, bundle: Bundle.main, value: "", comment: ""), for: .normal)
+        }    }
 
 
 

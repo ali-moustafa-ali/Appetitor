@@ -12,14 +12,17 @@ class MainCell: UITableViewCell {
 
     
     @IBOutlet weak var packageImage: UIImageView!
+    @IBOutlet weak var contentView2: UIView!
     @IBOutlet weak var moreBtnOutlet: UIButton!
+    
     
     @IBOutlet weak var titleLbl: UILabel!
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        contentView2.layer.borderWidth = 3
+        contentView2.layer.borderColor = UIColor(hex: "01ADBB").cgColor
     }
 
 

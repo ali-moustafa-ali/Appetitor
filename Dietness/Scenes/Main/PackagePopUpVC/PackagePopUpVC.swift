@@ -27,7 +27,10 @@ class PackagePopUpVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        subscribeBtnOutlet.setTitle(NSLocalizedString("Subscribe", comment: ""), for: .normal)
+
         if let url = URL(string: imageURL) {
+            print(url, "Ali")
             packageImage.sd_setImage(with: url, placeholderImage: UIImage(named: "default"))
         }
         packageName.text = package?.name
@@ -43,7 +46,9 @@ class PackagePopUpVC: UIViewController {
             
         }
         let price = prices.reduce(0, +)
-        packagePrice.text = "\(plans.first?.price ?? "") K.D"
+//        packagePrice.text = "\(plans.first?.price ?? "") R.S"
+        packagePrice.text = "\(plans.first?.price ?? "") \(NSLocalizedString("SAR", comment: ""))"
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +70,9 @@ class PackagePopUpVC: UIViewController {
                 self.didTapSubscribe?(selectedPlanId)
             }
         }else {
-            self.view.makeToast("Please Choose plan")
+//            self.view.makeToast("Please Choose plan")
+            self.view.makeToast(NSLocalizedString("Please Choose plan", comment: "Choose Plan Message"))
+
         }
         
     }
@@ -99,7 +106,9 @@ extension PackagePopUpVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedPlan = plans[indexPath.row]
-        packagePrice.text = "\(plans[indexPath.row].price ?? "") K.D"
+//        packagePrice.text = "\(plans[indexPath.row].price ?? "") R.S"
+        packagePrice.text = "\(plans[indexPath.row].price ?? "") \(NSLocalizedString("SAR", comment: ""))"
+
         SettingsManager().setSelectedPlan(value:self.selectedPlan)
         SettingsManager.manager.setSelectedPackage(value: package)
     }

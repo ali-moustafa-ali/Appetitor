@@ -85,7 +85,7 @@ class OtpVC: UIViewController {
         super.viewDidLoad()
         //        otpView.delegateOTP = self
         self.phoneLabel.text = phone
-        checkPhoneLabel.text = type == "email" ? "check your email".localized:"check your phone".localized
+        checkPhoneLabel.text = type == "email" ? "check your phone".localized:"check your phone".localized
         //        weSentYouLabel.text = type == "email" ? "We have sent a code to the email you entered":"We have sent a code to the phone number you entered"
         countDownStack.isHidden = comingFrom == "signup" ? false:true
         //        if status == "Pending" || status == "Waiting_payment"{
@@ -204,10 +204,10 @@ extension OtpVC: OTPFieldViewDelegate {
                             self.successfullStack.isHidden = false
                             self.countDownStack.isHidden = true
                             self.otpView.isHidden = true
-                            if self.autoActive! {
+//                            if self.autoActive! {
                                 let vc:PaymentVC = PaymentVC.instantiate(appStoryboard: .login)
                                 self.navigationController?.pushViewController(vc, animated: true)
-                            }
+//                            }
                         }else{
                             let vc:NewPasswordVC = NewPasswordVC.instantiate(appStoryboard: .login)
                             vc.otp = otpString
