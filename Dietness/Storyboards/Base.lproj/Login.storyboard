@@ -737,6 +737,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cTC-zM-9ib"/>
                     <connections>
+                        <outlet property="backButton" destination="lAB-HY-38d" id="m8W-rh-QTd"/>
                         <outlet property="confirmPasswordTextField" destination="8K6-Mj-fWS" id="5oP-0K-B33"/>
                         <outlet property="countryCodeButton" destination="cKC-Uk-4p7" id="WCi-Cg-Bma"/>
                         <outlet property="emailTextField" destination="3KM-CP-RhV" id="LyK-iU-iWV"/>

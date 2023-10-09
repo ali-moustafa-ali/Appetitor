@@ -19,6 +19,7 @@ import StepIndicator
 
 class SignupVC: UIViewController {
     
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
